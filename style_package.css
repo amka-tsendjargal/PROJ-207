@@ -1,0 +1,22 @@
+.bg-beige{
+	background-color: beige;
+}
+figure{
+  border: 2px solid #ccddee;
+  padding: 10px;
+}
+.p_image{
+  width:99%;
+  height:200px;
+
+}
+.v_image{
+  width: 100%;
+  height:190px;
+}
+figcaption {
+  font-size: 16pt;
+  font: italic  sans-serif;
+  padding: 3px;
+  text-align: center;
+}
