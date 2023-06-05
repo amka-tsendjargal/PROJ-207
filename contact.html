@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./styles_contact.css">
+</head>
+<body>
+    <div class="container">
+        <div class="agency-list center"> 
+            <h2>Our Agencies</h2>
+            <div class="agency">
+                <h3>Agency 1</h3>
+                <img src="images/blank_people.jpg" alt="Agency 1 Photo" width="200">
+                <p>Location: City, Country</p>
+                <p>Phone: +1 123-456-7890</p>
+            </div>
+            <div class="agency">
+                <h3>Agency 2</h3>
+                <img src="images/blank_people.jpg" alt="Agency 2 Photo" width="200">
+                <p>Location: City, Country</p>
+                <p>Phone: +1 987-654-3210</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>FAQs</h2>
+            
+            <div class="faq">
+                <h3>Q: How can I book a trip with your agency?</h3>
+                <p>A: You can easily book a trip with us by filling out the booking form on our website or by contacting our customer service team.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>Q: What payment methods do you accept?</h3>
+                <p>A: We accept various payment methods, including credit cards (Visa, Mastercard, American Express) and online payment platforms such as PayPal.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>Q: Can I make changes to my booking?</h3>
+                <p>A: Yes, you can make changes to your booking depending on the terms and conditions of your selected package. Please contact our customer service team for assistance.</p>
+            </div>
+            
+        </div>
+    </div>
+    <hr>
+    <div class="form-container">
+        <div class="left-content">
+            <h1>Contact Us</h1>
+            <form action="bouncer.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="purpose">Contact Purpose:</label>
+                    <select id="purpose" name="purpose" required>
+                        <option value="">Select purpose</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Customer Support">Customer Support</option>
+                        <option value="Partnership Opportunity">Partnership Opportunity</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div>
+            <h1>Location</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.4462551851384!2d-114.09270502392819!3d51.06331177171568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716ff152d950ff%3A0x2143bc8e7397787f!2sSAIT%20Campus%20Centre!5e0!3m2!1sen!2sca!4v1685478137616!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <footer>
+        &copy; Spring 2023 OOSD Team 6. All rights reserved.
+    </footer>
+    
+</body>
+
+
+</html>
