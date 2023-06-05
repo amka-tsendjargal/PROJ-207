@@ -7,7 +7,7 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="style_package.css">
-
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
       <nav class="navbar navbar-expand-md text-dark shadow mb-5 bg-beige rounded-bottom">
@@ -30,7 +30,7 @@
 
           </div>
       </nav>
-    <body>
+  <body>
       <form method="GET" action="../../bouncer.php">
         <div class="container">
           <div class="row">
@@ -43,28 +43,28 @@
             <div class="col-md-3 text-center">
               <figure class="mt-1">
                   <img src="../media/media/package_family.jpg"
-                   alt="Family" class="p_image">
-                  <figcaption><h4>Family</h4><h5>Vactions</h5></figcaption>
+                   alt="Family" class="p_image" onclick="getVactionlist('Family');">
+                  <figcaption><a href="#packages" onclick="getVactionlist('Family');"><h4>Family</h4><h5>Vactions</h5></a></figcaption>
               </figure>
             </div>
             <div class="col-md-3 text-center">
               <figure class="mt-1">
                   <img src="../media/media/package_beach.jpg"
-                   alt="Beach"class="p_image">
-                  <figcaption><h4>Beach</h4><h5>Vactions</h5></figcaption>
+                   alt="Beach"class="p_image" onclick="getVactionlist('Beach');">
+                  <figcaption><a href="#packages" onclick="getVactionlist('Beach');" ><h4>Beach</h4><h5>Vactions</h5></a></figcaption>
               </figure>
             </div><div class="col-md-3 text-center">
               <figure class="mt-1">
                   <img src="../media/media/package_adventure.jpg"
-                   alt="Adventure" class="p_image">
-                  <figcaption><h4>Adventure</h4><h5>Vactions</h5></figcaption>
+                   alt="Adventure" class="p_image" onclick="getVactionlist('Adventure');">
+                  <figcaption><a href="#packages" onclick="getVactionlist('Adventure');"><h4>Adventure</h4><h5>Vactions</h5></a></figcaption>
               </figure>
             </div>
             <div class="col-md-3 text-center">
               <figure class="mt-1">
                   <img src="../media/media/package_group.jpg"
-                   alt="Group" class="p_image">
-                  <figcaption><h4>Group</h4><h5>Vactions</h5></figcaption>
+                   alt="Group" class="p_image" onclick="getVactionlist('Group');">
+                  <figcaption><a href="#packages" onclick="getVactionlist('Group');"><h4>Group</h4><h5>Vactions</h5></a></figcaption>
               </figure>
             </div>
           
@@ -95,93 +95,142 @@
           <div class="row">
             <h2>Choose your Vaccation package</h2>
           </div>
-          <div class="row">
-            <div class=" col-md-6">
-              <div class="col-md-12" style="float:left;">
-                <table class="table" style="border: 1px solid black;">
-                  <tr>
-                  <td style="background-color:lightyellow;">
-                    <img src="images/package1.jpg" class="v_image p-3"/>
-                     <figcaption><h4>AIR CANADA</h4><h5>Vactions</h5></figcaption>
-                  
-                  </td>
-                  <td>
-                    <h4>Calgary - Puerto Vallarta</h4>
-                    <h5 class="text-center">Mexico</h5>
-                    <p><input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
-                      <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
-                      <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
-                      <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
-                      <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label></p>
-                    <p></p>
-                    <p>7 Days | June 8-15</p>
-                    <p></p>
-                    <p style="background-color:lightblue;" class="mt-5">All inclusive</p>
-                  
-                  </td>
-                  <td style="background-color:lightblue;">
-                    <p>1500/person</p>
-                    <p>Incl. Tax/Fees</p>
-                    <p>Flight+Hotel</p>
-                    <p>Incl. Tax/Fees</p>
-                    <p><button type="button" class="btn btn-primary">View Details</button></p>
-                  </td>
-                  </tr>
-                
-                </table>
-              </div>
-               
-               
-              
-            </div>
-            <div class="col-md-6">
-              <div class="col-md-12" style="float:left;">
-                <table class="table" style="border: 1px solid black;" >
-                  <tr>
-                  <td style="background-color:lightyellow;">
-                    <img src="images/package2.jpg" class="v_image p-3"/>
-                     <figcaption><h4>AIR CANADA</h4><h5>Vactions</h5></figcaption>
-                  
-                  </td>
-                  <td>
-                    <h4>Calgary - Honolulu - Oahu</h4>
-                    <h5 class="text-center">U.S</h5>
-                    <p><input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
-                      <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
-                      <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
-                      <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
-                      <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label></p>
-                    <p></p>
-                    <p>7 Days | June 8-15</p>
-                    <p></p>
-                    <p style="background-color:lightblue;" class="mt-5">All inclusive</p>
-                  
-                  </td>
-                  <td style="background-color:lightblue;">
-                    <p>1500/person</p>
-                    <p>Incl. Tax/Fees</p>
-                    <p>Flight+Hotel</p>
-                    <p>Incl. Tax/Fees</p>
-                    <p><button type="button" class="btn btn-primary">View Details</button></p>
-                  </td>
-                  </tr>
-                
-                </table>
-              </div>
-               
-              
-            </div>
-          </div>
-          <div class="row">
+          <div class="row" id="v_heading">
              
           </div>
+          <div class="row" id="packages">
+              
+              <div class="col-md-4">
+                <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
+                  <img src="images/package1.jpg" class="v_image p-3"/>
+                  <figcaption><h4>Calgary - Puerto Vallarta</h4><h5 class="text-center">Mexico</h5></figcaption>
+                  <div  style="float:left; border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
+                    <p class="m-2">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </p>
+                    <p class="m-2">7 Days | June 8-15</p>
+                    <ul class="m-2">
+                      <li>1500/person</li>
+                      <li>Flight+Hotel</li>
+                      <li>Incl. Tax/Fees</li>
+                    </ul>
+                    
+                    <p class="text-center"><button type="button" class="btn btn-primary" onclick="showDetails();">View Details</button></p>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
+                  <img src="images/package2.jpg" class="v_image p-3"/>
+                  <figcaption><h4>Calgary - Honolulu - Oahu</h4><h5 class="text-center">U.S</h5></figcaption>
+                  <div  style="float:left; border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
+                    <p class="m-2">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </p>
+                    <p class="m-2">7 Days | June 8-15</p>
+                    <ul class="m-2">
+                      <li>1500/person</li>
+                      <li>Flight+Hotel</li>
+                      <li>Incl. Tax/Fees</li>
+                    </ul>
+                    
+                    <p class="text-center"><button type="button" class="btn btn-primary" onclick="showDetails();">View Details</button></p>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
+                  <img src="images/safari.jpg" class="v_image p-3"/>
+                  <figcaption><h4>Calgary - Honolulu - Oahu</h4><h5 class="text-center">U.S</h5></figcaption>
+                  <div  style="float:left; border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
+                    <p class="m-2">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </p>
+                    <p class="m-2">7 Days | June 8-15</p>
+                    <ul class="m-2">
+                      <li>1500/person</li>
+                      <li>Flight+Hotel</li>
+                      <li>Incl. Tax/Fees</li>
+                    </ul>
+                    
+                    <p class="text-center"><button type="button" class="btn btn-primary" onclick="showDetails();">View Details</button></p>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            
+          </div>
+          <div class="row mt-3"   id="packDetails" style="display:none;">
+            <div class="col-md-12 mt-3" style="border: 1px solid orange; border-radius:29px;">
+              <table colspan="6">
+                <tr>
+                  <td colspan="2"><img src="images/safari.jpg" class="v_image p-3"/></td>
+                  <td colspan="4"><h3>Calgary - Honolulu - Oahu</h3><h5>U.S</h5>
+                    <p class="m-2">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </p>
+                    <p class="m-2">7 Days | June 8-15</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2"><h3>Air Canada</h3><h2>Vaccation</h2><p>7 Days</p></td>
+                  <td colspan="3"><div style="background-color: lightgrey; width: 98%; p-3">
+                    <h4>Days Inn</h4>
+                    <p>Room Type: Delux Oceanview Room</p>
+                    <p>Meal Plan : All inclusive</p>
+                  </div>
+                  </td>
+                  <td rowspan="3" class="text-center">
+                    <h3>$1500</h3> CAD/person<p><button type="button" class="btn btn-primary" onclick="showDetails();">Book Now</button></p>
+                  </td>
+                </tr>
+                <tr>
+                
+                  <td>Outbound</td>
+                  <td><h4>Air Canada</h4><p>Flight ac156</p></td>
+                  <td><h5>Calgary (yyc)</h5><p>June 8, 1.30 AM</p></td>
+                  <td>to</td>
+                  <td><h5>Calgary (yyc)</h5><p>June 9, 1.30 AM</p></td>
+                </tr>
+                <tr>
+                
+                  <td>Inbound</td>
+                  <td><h4>Air Canada</h4><p>Flight ac156</p></td>
+                  <td><h5>Calgary (yyc)</h5><p>June 15, 1.30 AM</p></td>
+                  <td>to</td>
+                  <td><h5>Calgary (yyc)</h5><p>June 16, 1.30 AM</p></td>
+                </tr>
+              
+              </table>
+            </div>  
+          </div>
           
-        </div>
-        
       </form>
     <footer>
+    <div class="row">
     <section class="container-fluid mt-3 rounded-bottom bg-beige"> 
-      <br/>
+      <h2 class="text-center">Address</h2>
         <div class="row">
           <div class="col-md-5">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.3766087946497!2d-114.09183072352467!3d51.06459757171607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716f927202bf3f%3A0x16877e49fcc8dbcb!2sStan%20Grad%20Centre!5e0!3m2!1sen!2sca!4v1685597065967!5m2!1sen!2sca" 
@@ -189,7 +238,7 @@
             </iframe>
           </div>
           <div class="col-md-3 text-center">
-            <h4 class="pt-3">Address</h4>
+            <p></p>
             <p>The Travel Experts,</p>
             <p>1301 16 Ave NW,</p>            
             <p>Calgary, AB </p>
@@ -201,9 +250,23 @@
             <p>Phone: 403-987-9999</p>
           </div>
         </div>
-        <p class="text-center">The &copy; 2023, assigned to OOSD Spring -Team 5</p> 
+         
     </section>
+    <p class="text-center p-3 bg-info">The &copy; 2023, assigned to OOSD Spring -Team 5</p>
+    </div>
     </footer>
 	</body>
+  <script>
+    function getVactionlist(id){
+    
+      document.getElementById('v_heading').innerHTML ="<h3>" +id+ " Vactions</h3>";
+      document.getElementById('v_heading').style.color = "Red";
+      
+    }
+    
+    function showDetails(){
+      document.getElementById('packDetails').style.display = "block";
+    }
+  </script>
 
 </html>
