@@ -10,9 +10,9 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-      <nav class="navbar navbar-expand-md text-dark shadow mb-5 bg-beige rounded-bottom">
+      <nav class="navbar navbar-expand-md text-dark shadow mb-5 bg-body rounded-bottom">
           <div class="container">
-              <a class="navbar-brand" href="#"><img src="images/logo.png" style="max-width: 90px;"></a>
+              <a class="navbar-brand" href="index.html"><img src="images/logo.png" style="max-width: 90px;"></a>
 
               <div>
                   <ul class="navbar-nav">
@@ -30,40 +30,39 @@
 
           </div>
       </nav>
-  <body>
       <form method="GET" action="../../bouncer.php">
         <div class="container">
           <div class="row">
             <div class="col-md-4 text-center"><hr style="width:98%;float:left;height:2px;background-color:green;"></div>
-            <div class="col-md-4 text-center"><h2>Book with Us&amp;Enjoy the ideal holiday</h2></div>
+            <div class="col-md-4 text-center"><h2>Book with Us &amp; Enjoy the ideal holiday</h2></div>
             <div class="col-md-4 text-center"><hr style="width:98%;float:left;height:2px;background-color:green;"></div> 
           </div>			
           
           <div class="row">
             <div class="col-md-3 text-center">
-              <figure class="mt-1">
+              <figure class="mt-1 rounded">
                   <img src="images/package_family.jpg"
-                   alt="Family" class="p_image" onclick="getVactionlist('Family');">
+                   alt="Family" class="p_image rounded" onclick="getVactionlist('Family');">
                   <figcaption><a href="#packages" onclick="getVactionlist('Family');"><h4>Family</h4><h5>Vactions</h5></a></figcaption>
               </figure>
             </div>
             <div class="col-md-3 text-center">
-              <figure class="mt-1">
+              <figure class="mt-1 rounded">
                   <img src="images/package_beach.jpg"
-                   alt="Beach"class="p_image" onclick="getVactionlist('Beach');">
+                   alt="Beach"class="p_image rounded" onclick="getVactionlist('Beach');">
                   <figcaption><a href="#packages" onclick="getVactionlist('Beach');" ><h4>Beach</h4><h5>Vactions</h5></a></figcaption>
               </figure>
             </div><div class="col-md-3 text-center">
-              <figure class="mt-1">
+              <figure class="mt-1 rounded">
                   <img src="images/package_adventure.jpg"
-                   alt="Adventure" class="p_image" onclick="getVactionlist('Adventure');">
+                   alt="Adventure" class="p_image rounded cover" onclick="getVactionlist('Adventure');">
                   <figcaption><a href="#packages" onclick="getVactionlist('Adventure');"><h4>Adventure</h4><h5>Vactions</h5></a></figcaption>
               </figure>
             </div>
             <div class="col-md-3 text-center">
-              <figure class="mt-1">
+              <figure class="mt-1 rounded">
                   <img src="images/package_group.jpg"
-                   alt="Group" class="p_image" onclick="getVactionlist('Group');">
+                   alt="Group" class="p_image rounded" onclick="getVactionlist('Group');">
                   <figcaption><a href="#packages" onclick="getVactionlist('Group');"><h4>Group</h4><h5>Vactions</h5></a></figcaption>
               </figure>
             </div>
@@ -104,7 +103,7 @@
                 <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
                   <img src="images/package1.jpg" class="v_image p-3"/>
                   <figcaption><h4>Calgary - Puerto Vallarta</h4><h5 class="text-center">Mexico</h5></figcaption>
-                  <div  style="float:left; border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
+                  <div class="text-center" style=" border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
                     <p class="m-2">
                       <span class="fa fa-star checked"></span>
                       <span class="fa fa-star checked"></span>
@@ -113,11 +112,9 @@
                       <span class="fa fa-star"></span>
                     </p>
                     <p class="m-2">7 Days | June 8-15</p>
-                    <ul class="m-2">
-                      <li>1500/person</li>
-                      <li>Flight+Hotel</li>
-                      <li>Incl. Tax/Fees</li>
-                    </ul>
+                    <p class="mb-0">1500/person</p>
+                    <p class="mb-0">Flight + Hotel</p>
+                    <p class="mb-2">Incl. Tax/Fees</p>
                     
                     <p class="text-center"><button type="button" class="btn btn-primary" onclick="showDetails();">View Details</button></p>
                     
@@ -129,7 +126,7 @@
                 <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
                   <img src="images/package2.jpg" class="v_image p-3"/>
                   <figcaption><h4>Calgary - Honolulu - Oahu</h4><h5 class="text-center">U.S</h5></figcaption>
-                  <div  style="float:left; border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
+                  <div class="text-center" style="float:left; border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
                     <p class="m-2">
                       <span class="fa fa-star checked"></span>
                       <span class="fa fa-star checked"></span>
@@ -138,11 +135,9 @@
                       <span class="fa fa-star"></span>
                     </p>
                     <p class="m-2">7 Days | June 8-15</p>
-                    <ul class="m-2">
-                      <li>1500/person</li>
-                      <li>Flight+Hotel</li>
-                      <li>Incl. Tax/Fees</li>
-                    </ul>
+                    <p class="mb-0">1500/person</p>
+                    <p class="mb-0">Flight + Hotel</p>
+                    <p class="mb-2">Incl. Tax/Fees</p>
                     
                     <p class="text-center"><button type="button" class="btn btn-primary" onclick="showDetails();">View Details</button></p>
                     
@@ -154,7 +149,7 @@
                 <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
                   <img src="images/safari.jpg" class="v_image p-3"/>
                   <figcaption><h4>Calgary - Honolulu - Oahu</h4><h5 class="text-center">U.S</h5></figcaption>
-                  <div  style="float:left; border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
+                  <div class="text-center" style="float:left; border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
                     <p class="m-2">
                       <span class="fa fa-star checked"></span>
                       <span class="fa fa-star checked"></span>
@@ -163,11 +158,9 @@
                       <span class="fa fa-star"></span>
                     </p>
                     <p class="m-2">7 Days | June 8-15</p>
-                    <ul class="m-2">
-                      <li>1500/person</li>
-                      <li>Flight+Hotel</li>
-                      <li>Incl. Tax/Fees</li>
-                    </ul>
+                    <p class="mb-0">1500/person</p>
+                    <p class="mb-0">Flight + Hotel</p>
+                    <p class="mb-2">Incl. Tax/Fees</p>
                     
                     <p class="text-center"><button type="button" class="btn btn-primary" onclick="showDetails();">View Details</button></p>
                     
@@ -227,34 +220,11 @@
           </div>
           
       </form>
-    <footer>
-    <div class="row">
-    <section class="container-fluid mt-3 rounded-bottom bg-beige"> 
-      <h2 class="text-center">Address</h2>
-        <div class="row">
-          <div class="col-md-5">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.3766087946497!2d-114.09183072352467!3d51.06459757171607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716f927202bf3f%3A0x16877e49fcc8dbcb!2sStan%20Grad%20Centre!5e0!3m2!1sen!2sca!4v1685597065967!5m2!1sen!2sca" 
-               style="border:0;width:100%;height:200px;" class="pt-3" allowfullscreen="" loading="lazy">
-            </iframe>
-          </div>
-          <div class="col-md-3 text-center">
-            <p></p>
-            <p>The Travel Experts,</p>
-            <p>1301 16 Ave NW,</p>            
-            <p>Calgary, AB </p>
-            <p>T2M 0L4</p>
-          </div>
-          <div class="col-md-4">
-            
-            <p class="pt-5">Email: thetravelexperts@gmail.com</p>
-            <p>Phone: 403-987-9999</p>
-          </div>
-        </div>
-         
-    </section>
-    <p class="text-center p-3 bg-info">The &copy; 2023, assigned to OOSD Spring -Team 5</p>
+    <div class="container-fluild shadow-lg rounded mt-3">
+
+    <p class="text-center p-3 bg-body">The &copy; 2023, assigned to OOSD Spring -Team 5</p>
+  
     </div>
-    </footer>
 	</body>
   <script>
     function getVactionlist(id){
