@@ -102,7 +102,7 @@
               <div class="col-md-4">
                 <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
                   <img src="images/package1.jpg" class="v_image p-3"/>
-                  <figcaption><h4>Calgary - Puerto Vallarta</h4><h5 class="text-center">Mexico</h5></figcaption>
+                  <figcaption id="pkgname_1"><h4>Calgary - Puerto Vallarta</h4></figcaption>
                   <div class="text-center" style=" border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
                     <p class="m-2">
                       <span class="fa fa-star checked"></span>
@@ -112,11 +112,11 @@
                       <span class="fa fa-star"></span>
                     </p>
                     <p class="m-2">7 Days | June 8-15</p>
-                    <p class="mb-0">1500/person</p>
+                    <p class="mb-0" id="pkgcost_1">1500/person</p>
                     <p class="mb-0">Flight + Hotel</p>
                     <p class="mb-2">Incl. Tax/Fees</p>
                     
-                    <p class="text-center"><button type="button" class="btn btn-primary" onclick="showDetails();">View Details</button></p>
+                    <p class="text-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#packagedtlModal"  onclick="showDetails(1);">View Details</button></p>
                     
                   </div>
                   
@@ -125,7 +125,7 @@
               <div class="col-md-4">
                 <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
                   <img src="images/package2.jpg" class="v_image p-3"/>
-                  <figcaption><h4>Calgary - Honolulu - Oahu</h4><h5 class="text-center">U.S</h5></figcaption>
+                  <figcaption id="pkgname_2"><h4>Calgary - Honolulu - Oahu</h4></figcaption>
                   <div class="text-center" style="float:left; border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
                     <p class="m-2">
                       <span class="fa fa-star checked"></span>
@@ -135,11 +135,11 @@
                       <span class="fa fa-star"></span>
                     </p>
                     <p class="m-2">7 Days | June 8-15</p>
-                    <p class="mb-0">1500/person</p>
-                    <p class="mb-0">Flight + Hotel</p>
+                    <p class="mb-0" id="pkgcost_2">2500/person</p>
+                    <p class="mb-0" >Flight + Hotel</p>
                     <p class="mb-2">Incl. Tax/Fees</p>
                     
-                    <p class="text-center"><button type="button" class="btn btn-primary" onclick="showDetails();">View Details</button></p>
+                    <p class="text-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#packagedtlModal"  onclick="showDetails(2);">View Details</button></p>
                     
                   </div>
                   
@@ -148,7 +148,8 @@
               <div class="col-md-4">
                 <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
                   <img src="images/safari.jpg" class="v_image p-3"/>
-                  <figcaption><h4>Calgary - Honolulu - Oahu</h4><h5 class="text-center">U.S</h5></figcaption>
+                  <figcaption id="pkgname_3"><h4>Calgary - Italy</h4></figcaption>
+                  <!-- <h5 class="text-center">U.S</h5> -->
                   <div class="text-center" style="float:left; border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
                     <p class="m-2">
                       <span class="fa fa-star checked"></span>
@@ -158,11 +159,11 @@
                       <span class="fa fa-star"></span>
                     </p>
                     <p class="m-2">7 Days | June 8-15</p>
-                    <p class="mb-0">1500/person</p>
+                    <p class="mb-0" id="pkgcost_3">3500/person</p>
                     <p class="mb-0">Flight + Hotel</p>
                     <p class="mb-2">Incl. Tax/Fees</p>
                     
-                    <p class="text-center"><button type="button" class="btn btn-primary" onclick="showDetails();">View Details</button></p>
+                    <p class="text-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#packagedtlModal"  onclick="showDetails(3);">View Details</button></p>
                     
                   </div>
                   
@@ -170,12 +171,28 @@
               </div>
             
           </div>
-          <div class="row mt-3"   id="packDetails" style="display:none;">
-            <div class="col-md-12 mt-3" style="border: 1px solid orange; border-radius:29px;">
-              <table colspan="6">
+          
+      </form>
+      <div class="container-fluild shadow-lg rounded mt-3">
+
+        <p class="text-center p-3 bg-body">The &copy; 2023, assigned to OOSD Spring -Team 5</p>
+    
+      </div>
+	</body>
+  
+  <!-- packagedtlModal start -->
+  
+  <div class="modal fade" id="packagedtlModal"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="packagedtlModalLabel"></h1>
+        </div>
+        <div class="modal-body">
+          <table colspan="6">
                 <tr>
                   <td colspan="2"><img src="images/safari.jpg" class="v_image p-3"/></td>
-                  <td colspan="4"><h3>Calgary - Honolulu - Oahu</h3><h5>U.S</h5>
+                  <td colspan="4" id="modaltblhead"><h3>Calgary - Honolulu - Oahu</h3><h5>U.S</h5>
                     <p class="m-2">
                       <span class="fa fa-star checked"></span>
                       <span class="fa fa-star checked"></span>
@@ -194,8 +211,8 @@
                     <p>Meal Plan : All inclusive</p>
                   </div>
                   </td>
-                  <td rowspan="3" class="text-center">
-                    <h3>$1500</h3> CAD/person<p><button type="button" class="btn btn-primary" onclick="showDetails();">Book Now</button></p>
+                  <td rowspan="3" class="text-center" id="modalpkgcost">
+                     
                   </td>
                 </tr>
                 <tr>
@@ -216,27 +233,39 @@
                 </tr>
               
               </table>
-            </div>  
-          </div>
-          
-      </form>
-    <div class="container-fluild shadow-lg rounded mt-3">
-
-    <p class="text-center p-3 bg-body">The &copy; 2023, assigned to OOSD Spring -Team 5</p>
-  
+        </div>
+        <div class="modal-footer" >
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" >Book your trip</button>
+        </div>
+      </div>
     </div>
-	</body>
-  <script>
-    function getVactionlist(id){
-    
-      document.getElementById('v_heading').innerHTML ="<h3>" +id+ " Vactions</h3>";
-      document.getElementById('v_heading').style.color = "Red";
+  </div>
+  
+  <!-- packagedtlModal end -->
+  
+    <script>
+      function getVactionlist(id){
       
-    }
-    
-    function showDetails(){
-      document.getElementById('packDetails').style.display = "block";
-    }
-  </script>
+        document.getElementById('v_heading').innerHTML ="<h3>" +id+ " Vactions</h3>";
+        document.getElementById('v_heading').style.color = "Red";
+        
+      }
+      
+      function showDetails(id){
+        
+        var pkg_heading= document.getElementById('pkgname_'+id).textContent;
+        document.getElementById('packagedtlModalLabel').innerHTML = pkg_heading;
+        document.getElementById('modaltblhead').innerHTML = "<h3>"+pkg_heading+"</h3>";
+        
+        var pkg_cost= document.getElementById('pkgcost_'+id).textContent;
+        
+        document.getElementById('modalpkgcost').innerHTML = "<h3 syle='color:red;'>"+pkg_cost+"</h3>";
+        
+        
+       
+         
+      }
+    </script>
 
 </html>
