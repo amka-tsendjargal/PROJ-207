@@ -15,6 +15,12 @@
             background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
         }
       </style>
+      <script>
+        var pkg_array_1 = {destination:"Calgary - Puerto Vallarta",d_country:"Mexico",days:"7",dates:"June 16-23",price:"$1500 / Person",image:"images/package1.jpg"};
+        var pkg_array_2 = {destination:"Calgary - Honolulu - Oahu",d_country:"U.S",days:"7",dates:"June 16-23",price:"$2500 / Person",image:"images/hawaii.jpg"};
+        var pkg_array_3 = {destination:"Calgary - Rio de Janeiro",d_country:"Brazil",days:"7",dates:"June 16-23",price:"$2000 / Person",image:"images/safari.jpg"};
+         
+      </script>
   </head>
   <body>
       <nav class="navbar navbar-expand-md text-dark shadow mb-5 bg-body rounded-bottom">
@@ -108,8 +114,8 @@
               
               <div class="col-md-4">
                 <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
-                  <img src="images/package1.jpg" class="v_image p-3 rounded"/>
-                  <figcaption id="pkgname_1"><h4>Calgary - Puerto Vallarta</h4></figcaption>
+                  <script>document.write("<img src="+pkg_array_1.image+" class='v_image p-3 rounded'/>");</script>
+                  <figcaption id="pkgname_1"><h4><script>document.write(pkg_array_1.destination);</script></h4><h5><script>document.write(pkg_array_1.d_country);</script></h5></figcaption>
                   <div class="text-center rounded" style=" border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
                     <p class="m-2">
                       <span class="fa fa-star checked"></span>
@@ -118,8 +124,8 @@
                       <span class="fa fa-star checked"></span>
                       <span class="fa fa-star"></span>
                     </p>
-                    <p class="m-2">7 Days | June 8-15</p>
-                    <p class="mb-0" id="pkgcost_1">1500/person</p>
+                    <p class="m-2"><script>document.write(pkg_array_1.days+" Days | "+pkg_array_1.dates);</script></p>
+                    <p class="mb-0" id="pkgcost_1"><script>document.write(pkg_array_1.price);</script></p>
                     <p class="mb-0">Flight + Hotel</p>
                     <p class="mb-2">Incl. Tax/Fees</p>
                     
@@ -131,8 +137,9 @@
               </div>
               <div class="col-md-4">
                 <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
-                  <img src="images/hawaii.jpg" class="v_image p-3 rounded"/>
-                  <figcaption id="pkgname_2"><h4>Calgary - Honolulu - Oahu</h4></figcaption>
+                  <script>document.write("<img src="+pkg_array_2.image+" class='v_image p-3 rounded'/>");</script>
+                  
+                  <figcaption id="pkgname_2"><h4><script>document.write(pkg_array_2.destination);</script></h4><h5><script>document.write(pkg_array_2.d_country);</script></h5></figcaption>
                   <div class="text-center rounded" style="float:left; border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
                     <p class="m-2">
                       <span class="fa fa-star checked"></span>
@@ -141,8 +148,8 @@
                       <span class="fa fa-star checked"></span>
                       <span class="fa fa-star"></span>
                     </p>
-                    <p class="m-2">7 Days | June 8-15</p>
-                    <p class="mb-0" id="pkgcost_2">2500/person</p>
+                    <p class="m-2"><script>document.write(pkg_array_2.days+" Days | "+pkg_array_2.dates);</script></p>
+                    <p class="mb-0" id="pkgcost_2"><script>document.write(pkg_array_2.price);</script></p>
                     <p class="mb-0" >Flight + Hotel</p>
                     <p class="mb-2">Incl. Tax/Fees</p>
                     
@@ -154,8 +161,8 @@
               </div>
               <div class="col-md-4">
                 <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
-                  <img src="images/safari.jpg" class="v_image p-3 rounded"/>
-                  <figcaption id="pkgname_3"><h4>Calgary - Italy</h4></figcaption>
+                  <script>document.write("<img src="+pkg_array_3.image+" class='v_image p-3 rounded'/>");</script>
+                  <figcaption id="pkgname_3"><h4><script>document.write(pkg_array_3.destination);</script></h4><h5><script>document.write(pkg_array_3.d_country);</script></h5></figcaption>
                   <!-- <h5 class="text-center">U.S</h5> -->
                   <div class="text-center rounded" style="float:left; border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
                     <p class="m-2">
@@ -165,8 +172,8 @@
                       <span class="fa fa-star checked"></span>
                       <span class="fa fa-star"></span>
                     </p>
-                    <p class="m-2">7 Days | June 8-15</p>
-                    <p class="mb-0" id="pkgcost_3">3500/person</p>
+                    <p class="m-2"><script>document.write(pkg_array_3.days+" Days | "+pkg_array_3.dates);</script></p>
+                    <p class="mb-0" id="pkgcost_3"><script>document.write(pkg_array_3.price);</script></p>
                     <p class="mb-0">Flight + Hotel</p>
                     <p class="mb-2">Incl. Tax/Fees</p>
                     
@@ -196,33 +203,45 @@
           <h1 class="modal-title" id="packagedtlModalLabel"></h1>
         </div>
         <div class="modal-body">
-          <table colspan="6">
-                <tr>
-                  <td colspan="2"><img src="images/safari.jpg" class="v_image p-3"/></td>
-                  <td colspan="4" id="modaltblhead"><h3>Calgary - Honolulu - Oahu</h3><h5>U.S</h5>
-                    <p class="m-2">
+          <div class="row">
+            <div class="col-md-4" id="modalimage">
+            
+            
+            </div>
+            <div class="col-md-5" id="modaltblhead">
+               
+            </div>
+            <div class="col-md-3" >
+              <p class="m-2">
                       <span class="fa fa-star checked"></span>
                       <span class="fa fa-star checked"></span>
                       <span class="fa fa-star checked"></span>
                       <span class="fa fa-star checked"></span>
                       <span class="fa fa-star"></span>
-                    </p>
-                    <p class="m-2">7 Days | June 8-15</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2"><h3>Air Canada</h3><h2>Vaccation</h2><p>7 Days</p></td>
-                  <td colspan="3"><div style="background-color: lightgrey; width: 98%; p-3">
-                    <h4>Days Inn</h4>
-                    <p>Room Type: Delux Oceanview Room</p>
-                    <p>Meal Plan : All inclusive</p>
-                  </div>
-                  </td>
-                  <td rowspan="3" class="text-center" id="modalpkgcost">
-                     
-                  </td>
-                </tr>
-                <tr>
+              </p>
+              <h4 style="color:red;" id="modalpkgcost"></h4>
+            </div>
+          </div>
+          <hr>
+          <div class="row bg-beige"> 
+            <div class="col-md-4">
+                 <h4 class="text-center">Accomadation</h4>
+            </div>
+            <div class="col-md-8">
+              <h4>Days Inn</h4>
+              <p>Room Type: Delux Oceanview Room</p>
+              <p>Meal Plan : All inclusive</p> 
+            </div>
+          
+          </div>
+          <hr>
+          <div class="row"> 
+            <div class="col-md-2">
+                 <h4 class="text-center mt-5">Travel</h4>
+            </div>
+            <div class="col-md-10">
+            <table>
+              <tr>
                 
                   <td>Outbound</td>
                   <td><h4>Air Canada</h4><p>Flight ac156</p></td>
@@ -240,6 +259,54 @@
                 </tr>
               
               </table>
+            </div>
+          
+          </div>
+          
+          <!-- <table colspan="6"> -->
+                <!-- <tr> -->
+                  <!-- <td colspan="2"><img src="images/safari.jpg" class="v_image p-3"/></td> -->
+                  <!-- <td colspan="4" id="modaltblhead"><h3></h3><h5></h5> -->
+                    <!-- <p class="m-2"> -->
+                      <!-- <span class="fa fa-star checked"></span> -->
+                      <!-- <span class="fa fa-star checked"></span> -->
+                      <!-- <span class="fa fa-star checked"></span> -->
+                      <!-- <span class="fa fa-star checked"></span> -->
+                      <!-- <span class="fa fa-star"></span> -->
+                    <!-- </p> -->
+                    <!-- <p class="m-2">7 Days | June 8-15</p> -->
+                  <!-- </td> -->
+                <!-- </tr> -->
+                <!-- <tr> -->
+                  <!-- <td colspan="2"><h3>Air Canada</h3><h2>Vaccation</h2><p>7 Days</p></td> -->
+                  <!-- <td colspan="3"><div style="background-color: lightgrey; width: 98%; p-3"> -->
+                    <!-- <h4>Days Inn</h4> -->
+                    <!-- <p>Room Type: Delux Oceanview Room</p> -->
+                    <!-- <p>Meal Plan : All inclusive</p> -->
+                  <!-- </div> -->
+                  <!-- </td> -->
+                  <!-- <td rowspan="3" class="text-center" id="modalpkgcost"> -->
+                     
+                  <!-- </td> -->
+                <!-- </tr> -->
+                <!-- <tr> -->
+                
+                  <!-- <td>Outbound</td> -->
+                  <!-- <td><h4>Air Canada</h4><p>Flight ac156</p></td> -->
+                  <!-- <td><h5>Calgary (yyc)</h5><p>June 8, 1.30 AM</p></td> -->
+                  <!-- <td>to</td> -->
+                  <!-- <td><h5>Calgary (yyc)</h5><p>June 9, 1.30 AM</p></td> -->
+                <!-- </tr> -->
+                <!-- <tr> -->
+                
+                  <!-- <td>Inbound</td> -->
+                  <!-- <td><h4>Air Canada</h4><p>Flight ac156</p></td> -->
+                  <!-- <td><h5>Calgary (yyc)</h5><p>June 15, 1.30 AM</p></td> -->
+                  <!-- <td>to</td> -->
+                  <!-- <td><h5>Calgary (yyc)</h5><p>June 16, 1.30 AM</p></td> -->
+                <!-- </tr> -->
+              
+              <!-- </table> -->
         </div>
         <div class="modal-footer" >
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -261,13 +328,27 @@
       
       function showDetails(id){
         
-        var pkg_heading= document.getElementById('pkgname_'+id).textContent;
+        var pkg_heading='';  var pkg_price ='';  var pkg_img ='';
+        if(id==1) {
+           pkg_heading += pkg_array_1.destination;
+           pkg_price +=  pkg_array_1.price;
+           pkg_img += pkg_array_1.image;
+        }else if(id==2){
+          pkg_heading += pkg_array_2.destination;
+          pkg_price +=  pkg_array_2.price;
+          pkg_img += pkg_array_2.image;
+        }else{
+          pkg_heading += pkg_array_3.destination;
+          pkg_price +=  pkg_array_3.price;
+          pkg_img += pkg_array_3.image;
+        }
+        
         document.getElementById('packagedtlModalLabel').innerHTML = pkg_heading;
-        document.getElementById('modaltblhead').innerHTML = "<h3>"+pkg_heading+"</h3>";
+        document.getElementById('modaltblhead').innerHTML = "<p>"+pkg_heading+"</p>";
+        document.getElementById('modalpkgcost').innerHTML = pkg_price;
         
-        var pkg_cost= document.getElementById('pkgcost_'+id).textContent;
+        document.getElementById('modalimage').innerHTML = "<img src="+pkg_img+" class='v_image p-3 rounded'/>";
         
-        document.getElementById('modalpkgcost').innerHTML = "<h3 syle='color:red;'>"+pkg_cost+"</h3>";
         
         
        

@@ -5,11 +5,6 @@ figure{
   border: 2px solid #ccddee;
   padding: 10px;
 }
-.p_image{
-  width:99%;
-  height:200px;
-
-}
 .v_image{
   width: 100%;
   aspect-ratio: 3/2;
