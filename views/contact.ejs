@@ -1,0 +1,212 @@
+<%- include('header') %>
+
+<div class="container">
+    <h1 class="text-center mb-4">Our Agencies</h1>
+
+    <div class="row">
+      <div class="col">
+        <div class="card mb-3">
+          <img
+            src="./images/blank_people.jpg"
+            class="card-img-top rounded-circle"
+            alt="Agency 1"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Agency 1</h5>
+            <p class="card-text">Telephone: +1 123-456-7890</p>
+            <p class="card-text">Location: New York, USA</p>
+            <p class="card-text text-muted">
+              "Exploring the world together!"
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <img
+            src="./images/blank_people.jpg"
+            class="card-img-top rounded-circle"
+            alt="Agency 2"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Agency 2</h5>
+            <p class="card-text">Telephone: +1 987-654-3210</p>
+            <p class="card-text">Location: London, UK</p>
+            <p class="card-text text-muted">
+              "Unforgettable travel experiences!"
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <img
+            src="./images/blank_people.jpg"
+            class="card-img-top rounded-circle"
+            alt="Agency 3"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Agency 3</h5>
+            <p class="card-text">Telephone: +1 555-123-4567</p>
+            <p class="card-text">Location: Paris, France</p>
+            <p class="card-text text-muted">
+              "Your gateway to amazing destinations!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mb-5">
+    <h1 class="mb-4 text-center">FAQs</h1>
+
+    <div class="accordion" id="faqAccordion">
+      <!-- FAQ 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading1">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqCollapse1"
+            aria-expanded="true"
+            aria-controls="faqCollapse1"
+          >
+            Q: How can I book a trip with your agency?
+          </button>
+        </h2>
+        <div
+          id="faqCollapse1"
+          class="accordion-collapse collapse show"
+          aria-labelledby="faqHeading1"
+          data-bs-parent="#faqAccordion"
+        >
+          <div class="accordion-body">
+            A: You can easily book a trip with us by filling out the booking
+            form on our website or by contacting our customer service team.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading2">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqCollapse2"
+            aria-expanded="false"
+            aria-controls="faqCollapse2"
+          >
+            Q: What payment methods do you accept?
+          </button>
+        </h2>
+        <div
+          id="faqCollapse2"
+          class="accordion-collapse collapse"
+          aria-labelledby="faqHeading2"
+          data-bs-parent="#faqAccordion"
+        >
+          <div class="accordion-body">
+            A: We accept various payment methods, including credit cards
+            (Visa, Mastercard, American Express) and online payment platforms
+            such as PayPal.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading3">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqCollapse3"
+            aria-expanded="false"
+            aria-controls="faqCollapse3"
+          >
+            Q: Can I make changes to my booking?
+          </button>
+        </h2>
+        <div
+          id="faqCollapse3"
+          class="accordion-collapse collapse"
+          aria-labelledby="faqHeading3"
+          data-bs-parent="#faqAccordion"
+        >
+          <div class="accordion-body">
+            A: Yes, you can make changes to your booking depending on the
+            terms and conditions of your selected package. Please contact our
+            customer service team for assistance.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="container">
+    <div class="form-container bg-white">
+      <h1>Contact Us</h1>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter your name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <select
+            class="form-select"
+            id="dropdown"
+            aria-label="Select an option"
+          >
+            <option selected>Select an option</option>
+            <option value="option1">Generay Inquiry</option>
+            <option value="option2">Customer Support</option>
+            <option value="option3">Partnership Opportunity</option>
+            <option value="option4">Feedback</option>
+            <option value="option5">Others</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea
+            class="form-control"
+            id="message"
+            placeholder="Enter your message here"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <div class="other-content">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.4462551851384!2d-114.09270502392819!3d51.06331177171568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716ff152d950ff%3A0x2143bc8e7397787f!2sSAIT%20Campus%20Centre!5e0!3m2!1sen!2sca!4v1685478137616!5m2!1sen!2sca"
+        width="670"
+        height="500"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+
+<%- include('footer') %>

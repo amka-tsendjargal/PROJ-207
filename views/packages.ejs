@@ -1,0 +1,147 @@
+<%- include('header') %>
+
+<form method="GET" action="../../bouncer.php">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center"><hr style="width:98%;float:left;height:2px;background-color:green;"></div>
+        <div class="col-md-4 text-center"><h2>Book with Us &amp; Enjoy the ideal holiday</h2></div>
+        <div class="col-md-4 text-center"><hr style="width:98%;float:left;height:2px;background-color:green;"></div> 
+      </div>			
+      
+      <div class="row">
+        <div class="col-md-3 text-center">
+          <figure class="mt-1 rounded">
+              <img src="images/package_family.jpg"
+               alt="Family" class="v_image rounded" onclick="getVactionlist('Family');">
+              <figcaption><a href="#packages" onclick="getVactionlist('Family');"><h4>Family</h4><h5>Vactions</h5></a></figcaption>
+          </figure>
+        </div>
+        <div class="col-md-3 text-center">
+          <figure class="mt-1 rounded">
+              <img src="images/package_beach.jpg"
+               alt="Beach"class="v_image rounded" onclick="getVactionlist('Beach');">
+              <figcaption><a href="#packages" onclick="getVactionlist('Beach');" ><h4>Beach</h4><h5>Vactions</h5></a></figcaption>
+          </figure>
+        </div><div class="col-md-3 text-center">
+          <figure class="mt-1 rounded">
+              <img src="images/skydiving.jpg"
+               alt="Adventure" class="v_image rounded cover" onclick="getVactionlist('Adventure');">
+              <figcaption><a href="#packages" onclick="getVactionlist('Adventure');"><h4>Adventure</h4><h5>Vactions</h5></a></figcaption>
+          </figure>
+        </div>
+        <div class="col-md-3 text-center">
+          <figure class="mt-1 rounded">
+              <img src="images/package_group.jpg"
+               alt="Group" class="v_image rounded" onclick="getVactionlist('Group');">
+              <figcaption><a href="#packages" onclick="getVactionlist('Group');"><h4>Group</h4><h5>Vactions</h5></a></figcaption>
+          </figure>
+        </div>
+      
+      </div>
+      <h4 class="text-center gradient-custom-2 rounded">Our Speciality</h4>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <aside>
+            <h4>About the Travel Experts</h4>
+            <p>We inspire confidence in the hearts and minds of our members to live their best lives. We’re guided by our values, which serve as a compass for every decision we make. .</p>
+          </aside>
+        </div>
+        <div class="col-md-6">
+          <aside>
+            <h4>Our Vision &amp; Values</h4>
+            <ul>
+              <li>We Value integrity,</li>
+              <li>Respect</li>
+              <li>Collboration</li>
+              <li>Excellence</li>
+              
+            </ul>
+          </aside>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <h2>Choose your Vaccation package</h2>
+      </div>
+      <div class="row" id="v_heading">
+         
+      </div>
+      <div class="row" id="packages">
+          
+          <div class="col-md-4">
+            <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
+              <img src="images/package1.jpg" class="v_image p-3 rounded"/>
+              <figcaption id="pkgname_1"><h4>Calgary - Puerto Vallarta</h4></figcaption>
+              <div class="text-center rounded" style=" border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
+                <p class="m-2">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </p>
+                <p class="m-2">7 Days | June 8-15</p>
+                <p class="mb-0" id="pkgcost_1">1500/person</p>
+                <p class="mb-0">Flight + Hotel</p>
+                <p class="mb-2">Incl. Tax/Fees</p>
+                
+                <p class="text-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#packagedtlModal"  onclick="showDetails(1);">View Details</button></p>
+                
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
+              <img src="images/hawaii.jpg" class="v_image p-3 rounded"/>
+              <figcaption id="pkgname_2"><h4>Calgary - Honolulu - Oahu</h4></figcaption>
+              <div class="text-center rounded" style="float:left; border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
+                <p class="m-2">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </p>
+                <p class="m-2">7 Days | June 8-15</p>
+                <p class="mb-0" id="pkgcost_2">2500/person</p>
+                <p class="mb-0" >Flight + Hotel</p>
+                <p class="mb-2">Incl. Tax/Fees</p>
+                
+                <p class="text-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#packagedtlModal"  onclick="showDetails(2);">View Details</button></p>
+                
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="col-md-12" style="float:left; border: 1px solid green;border-radius:29px;">
+              <img src="images/safari.jpg" class="v_image p-3 rounded"/>
+              <figcaption id="pkgname_3"><h4>Calgary - Italy</h4></figcaption>
+              <!-- <h5 class="text-center">U.S</h5> -->
+              <div class="text-center rounded" style="float:left; border: 1px solid white; margin: 10px;width:95%;background-color:rgba(192,192,192,0.3);">
+                <p class="m-2">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </p>
+                <p class="m-2">7 Days | June 8-15</p>
+                <p class="mb-0" id="pkgcost_3">3500/person</p>
+                <p class="mb-0">Flight + Hotel</p>
+                <p class="mb-2">Incl. Tax/Fees</p>
+                
+                <p class="text-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#packagedtlModal"  onclick="showDetails(3);">View Details</button></p>
+                
+              </div>
+              
+            </div>
+          </div>
+        
+      </div>
+      
+  </form>
+
+<%- include('footer') %>

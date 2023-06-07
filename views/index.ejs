@@ -1,0 +1,75 @@
+<%- include('header') %>
+
+<div class="container mb-5 text-white shadow-lg rounded bg-dark">
+    <div class="row">
+        <div class="col p-5">
+            <h1>World's leading travel agency company.</h1>
+            <h3>
+                <small class="text-white-50">Ranked top 5 by Forbes Magazine 4 years in a row.</small>
+            </h3>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md bg-light shadow rounded">
+            <div class="container p-5">
+                <h2>News item 1</h2>
+                <p>Some blank text about notable news and events happening around the world</p>
+            </div>
+        </div>
+        <div class="col-md mx-4 bg-light shadow rounded">
+            <div class="container p-5">
+                <h2>News item 2</h2>
+                <p>Some blank text about notable news and events happening around the world</p>
+            </div>
+        </div>
+        <div class="col-md bg-light shadow rounded">
+            <div class="container p-5">
+                <h2>News item 3</h2>
+                <p>Some blank text about notable news and events happening around the world</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-4">
+    <div id="carouselmain" class="carousel slide carousel-fade" data-bs-theme="dark">
+        <!-- Carousel slide indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselmain" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselmain" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselmain" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselmain" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <!-- Carousel body/images -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/hawaii.jpg" class="d-block w-100 rounded">
+            </div>
+            <div class="carousel-item">
+                <img src="images/iceland.jpg" class="d-block w-100 rounded">
+            </div>
+            <div class="carousel-item">
+                <img src="images/safari.jpg" class="d-block w-100 rounded">
+            </div>
+            <div class="carousel-item">
+                <img src="images/tokyo.jpg" class="d-block w-100 rounded">
+            </div>
+        </div>
+        <!-- Carousel Next/Previous controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselmain" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselmain" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<%- include('footer') %>

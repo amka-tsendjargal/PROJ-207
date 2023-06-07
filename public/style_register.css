@@ -1,0 +1,32 @@
+.gradient-custom-1 {
+    background-size: cover;
+}
+
+.gradient-custom-2 
+{
+    background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+}
+
+.btn {
+    width: 100%;          
+    --mdb-btn-padding-top: 0.625rem;
+    --mdb-btn-padding-bottom: 0.5rem;
+    --mdb-btn-border-width: 0;
+    --mdb-btn-border-color: none;
+    --mdb-btn-border-radius: 0.25rem;
+    --mdb-btn-box-shadow: 0 4px 9px -4px rgba(0,0,0,0.35);
+    --mdb-btn-hover-box-shadow: 0 8px 9px -4px rgba(0,0,0,0.15),0 4px 18px 0 rgba(0,0,0,0.1);
+    --mdb-btn-focus-box-shadow: 0 8px 9px -4px rgba(0,0,0,0.15),0 4px 18px 0 rgba(0,0,0,0.1);
+    --mdb-btn-active-box-shadow: 0 8px 9px -4px rgba(0,0,0,0.15),0 4px 18px 0 rgba(0,0,0,0.1);
+    padding-top: var(--mdb-btn-padding-top);
+    padding-bottom: var(--mdb-btn-padding-bottom);
+    text-transform: uppercase;
+    vertical-align: bottom;
+    border: 0;
+    border-radius: var(--mdb-btn-border-radius);
+    box-shadow: var(--mdb-btn-box-shadow);
+}
+
+.btn:hover {
+    box-shadow: 0 8px 9px -4px rgba(20,164,77,.3), 0 4px 18px 0 rgba(20,164,77,.2);
+}
