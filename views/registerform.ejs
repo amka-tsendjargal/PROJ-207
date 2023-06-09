@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <style>
+        .gradient-custom-1 {
+            background-size: cover;
+        }
+
+
+        .gradient-custom-2
+        {
+            background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+        }
+
+
+        .btn {
+            width: 100%;          
+            --mdb-btn-padding-top: 0.625rem;
+            --mdb-btn-padding-bottom: 0.5rem;
+            --mdb-btn-border-width: 0;
+            --mdb-btn-border-color: none;
+            --mdb-btn-border-radius: 0.25rem;
+            --mdb-btn-box-shadow: 0 4px 9px -4px rgba(0,0,0,0.35);
+            --mdb-btn-hover-box-shadow: 0 8px 9px -4px rgba(0,0,0,0.15),0 4px 18px 0 rgba(0,0,0,0.1);
+            --mdb-btn-focus-box-shadow: 0 8px 9px -4px rgba(0,0,0,0.15),0 4px 18px 0 rgba(0,0,0,0.1);
+            --mdb-btn-active-box-shadow: 0 8px 9px -4px rgba(0,0,0,0.15),0 4px 18px 0 rgba(0,0,0,0.1);
+            padding-top: var(--mdb-btn-padding-top);
+            padding-bottom: var(--mdb-btn-padding-bottom);
+            text-transform: uppercase;
+            vertical-align: bottom;
+            border: 0;
+            border-radius: var(--mdb-btn-border-radius);
+            box-shadow: var(--mdb-btn-box-shadow);
+        }
+       
+        .btn:hover {
+            box-shadow: 0 8px 9px -4px rgba(20,164,77,.3), 0 4px 18px 0 rgba(20,164,77,.2);
+        }
+    </style>
+    <script>
+        function resetConfirmation() {
+            var r = confirm("Are you sure you want to reset the form?");
+            if (r == true) {
+                document.getElementById("myForm").reset();
+            }
+        }
+    </script>
+    <title>Travel Experts | Registration</title>
+</head>
+
+
+<body>
+    <section class="min-vh-100 vh-auto img-responsive gradient-custom-1"
+        style="background-image: url('./images/iceland.jpg');">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <div class="d-flex justify-content-center">
+                                    <a href="/index.html"><img src="./images/logo.png" alt="logo" width="100px" height="100px"></a>
+                                </div>
+
+
+                                <br/>
+
+
+                                <h2 class="text-uppercase text-center mb-5">Travel Experts | Registration</h2>
+
+
+                                <form method="post" action="/register1">
+
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="form3m" class="form-control form-control-lg" name="CustFirstName"/>
+                                                <label class="form-label" for="CustFirstName">First name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="form3n" class="form-control form-control-lg" />
+                                                <label class="form-label" name="CustLastName">Last name</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-outline mb-4">
+                                            <input type="text" id="form3t8" class="form-control form-control-lg" />
+                                            <label class="form-label" name="CustAddress">Address</label>
+                                        </div>
+
+
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="form3n1" class="form-control form-control-lg" />
+                                                <label class="form-label" name="CustCity">City</label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="form3n1" class="form-control form-control-lg" />
+                                                <label class="form-label" name="CustProv">Province</label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="form3n1" class="form-control form-control-lg" />
+                                                <label class="form-label" name="CustPostal">Postal Code</label>
+                                            </div>
+                                        </div>
+           
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="form3m1" class="form-control form-control-lg" />
+                                                <label class="form-label" name="CustCountry">Country</label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="tel" id="form3n1" class="form-control form-control-lg" />
+                                                <label class="form-label" name="CustHomePhone">Phone</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-outline mb-4">
+                                        <input type="password" id="form3cg" class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3cg">Password</label>
+                                    </div>
+
+
+                                    <div class="form-outline mb-4">
+                                        <input type="password" id="form3dg" class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3dg">Repeat your password</label>
+                                    </div>
+
+
+                                    <div class="form-check d-flex justify-content-center mb-5">
+                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2cg" />
+                                        <label class="form-check-label" for="form2g">
+                                            I agree with the <a href="#!" class="text-body"><u>Terms and Conditions!</u></a>
+                                        </label>
+                                    </div>
+
+
+                                    <div class="d-flex justify-content-center">
+                                        <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-2 text-body" >Register</button>
+                                    </div>
+
+
+                                    <div class="d-flex justify-content-center pt-3">
+                                        <input class="btn btn-light btn-lg" type="reset" value="Reset">
+                                    </div>
+
+
+                                    <p class="text-center text-muted mt-5 mb-0">Already an expert traveler? <a href="#!" class="fw-bold text-body"><u>Login here</u></a></p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

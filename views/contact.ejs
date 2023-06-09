@@ -16,36 +16,13 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-    <style>
-      .form-container {
-        float: left;
-        width: 600px;
-        border: 1px solid #ddd;
-        padding: 20px;
-        margin-right: 20px;
-      }
-
-      .other-content {
-        margin-left: 420px;
-      }
-      .card-img-top {
-        object-fit: cover;
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-      }
-      .card {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
-      }
-    </style>
   </head>
   <body style="background-size: cover" background="./images/bg-contact.jpg">
     <%- include('header') %>
 
     <!-- Name Tag(Name Card) -->
     <div class="container">
-      <h1>Agent Details</h1>
+      <h1 class="container mb-5">Agent Details</h1>
 
       <div class="mb-3">
         <label for="agentSelect" class="form-label">Select By Agent ID:</label>
@@ -155,7 +132,7 @@
 
     <!-- Contact Form -->
     <div class="container">
-      <div class="form-container bg-white">
+      <div class="form-container bg-white border-0">
         <h1>Contact Us</h1>
         <form action="/send-email" method="POST">
           <div class="mb-3">
@@ -230,64 +207,6 @@
 
     <%- include('footer') %>
 
-    <!-- Script for agent list  -->
-    <script>
-      // Fetch the JSON data from the "/agents" endpoint
-      fetch("/agents")
-        .then((response) => response.json())
-        .then((jsonData) => {
-          // Populate dropdown with Agent IDs
-          var agentSelect = document.getElementById("agentSelect");
-          jsonData.forEach(function (agent) {
-            var option = document.createElement("option");
-            option.value = agent.AgentId;
-            option.text = agent.AgentId;
-            agentSelect.appendChild(option);
-          });
 
-          // Event listener for dropdown selection
-          agentSelect.addEventListener("change", function () {
-            var selectedAgentId = parseInt(this.value);
-            var selectedAgent = jsonData.find(function (agent) {
-              return agent.AgentId === selectedAgentId;
-            });
-
-            if (selectedAgent) {
-              displayAgentInfo(selectedAgent);
-            } else {
-              resetAgentInfo();
-            }
-          });
-
-          // Display agent information
-          function displayAgentInfo(agent) {
-            var agentName = document.getElementById("agentName");
-            var agentPosition = document.getElementById("agentPosition");
-            var agentEmail = document.getElementById("agentEmail");
-            var agentPhone = document.getElementById("agentPhone");
-            var agentInfo = document.getElementById("agentInfo");
-
-            agentName.textContent =
-              agent.AgtFirstName +
-              " " +
-              (agent.AgtMiddleInitial ? agent.AgtMiddleInitial + " " : "") +
-              agent.AgtLastName;
-            agentPosition.textContent = agent.AgtPosition;
-            agentEmail.textContent = "Email: " + agent.AgtEmail;
-            agentPhone.textContent = "Phone: " + agent.AgtBusPhone;
-
-            agentInfo.style.display = "block";
-          }
-
-          // Reset agent information
-          function resetAgentInfo() {
-            var agentInfo = document.getElementById("agentInfo");
-            agentInfo.style.display = "none";
-          }
-        })
-        .catch((error) => {
-          console.log("Error fetching JSON data:", error);
-        });
-    </script>
   </body>
 </html>
