@@ -11,7 +11,7 @@
             background-size: cover;
         }
 
-        .gradient-custom-2 
+        .gradient-custom-2
         {
             background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
         }
@@ -35,17 +35,28 @@
             border-radius: var(--mdb-btn-border-radius);
             box-shadow: var(--mdb-btn-box-shadow);
         }
-        
+       
         .btn:hover {
             box-shadow: 0 8px 9px -4px rgba(20,164,77,.3), 0 4px 18px 0 rgba(20,164,77,.2);
         }
     </style>
+    <script>
+        function resetConfirmation() {
+            var r = confirm("Are you sure you want to reset the form?");
+            if (r == true) {
+                document.getElementById("myForm").reset();
+            }
+        }
+    </script>
     <title>Travel Experts | Registration</title>
 </head>
 
+
+
+
 <body>
     <section class="min-vh-100 vh-auto img-responsive gradient-custom-1"
-        style="background-image: url('./images/iceland.jpg');">
+        style="background-image: url('/images/iceland.jpg');">
         <div class="mask d-flex align-items-center h-100 gradient-custom-3">
             <div class="container h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
@@ -53,62 +64,79 @@
                         <div class="card" style="border-radius: 15px;">
                             <div class="card-body p-5">
                                 <div class="d-flex justify-content-center">
-                                    <a href="/index.html"><img src="./images/logo.png" alt="logo" width="100px" height="100px"></a> 
+                                    <a href="/index.html"><img src="/images/logo.png" alt="logo" width="100px" height="100px"></a>
                                 </div>
 
                                 <br/>
 
                                 <h2 class="text-uppercase text-center mb-5">Travel Experts | Registration</h2>
 
-                                <form>
+                                <form method="post" action="/register1">
 
                                     <div class="row">
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
-                                                <input type="text" id="form3m" class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3m">First name</label>
+                                                <input type="text" id="form3m" class="form-control form-control-lg" name="CustFirstName"/>
+                                                <label class="form-label" for="CustFirstName">First name</label>
                                             </div>
                                         </div>
+
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
-                                                <input type="text" id="form3n" class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3n">Last name</label>
+                                                <input type="text" id="form3n" class="form-control form-control-lg" name="CustLastName"/>
+                                                <label class="form-label" for="CustLastName">Last name</label>
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="row">
                                         <div class="form-outline mb-4">
-                                            <input type="text" id="form3t8" class="form-control form-control-lg" />
-                                            <label class="form-label" for="form3t8">Address</label>
+                                            <input type="text" id="form3t8" class="form-control form-control-lg" name="CustAddress" />
+                                            <label class="form-label" for="CustAddress">Address</label>
                                         </div>
-            
+
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
-                                                <input type="text" id="form3m1" class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3m1">Country</label>
+                                                <input type="text" id="form3n1" class="form-control form-control-lg" name="CustCity" />
+                                                <label class="form-label" for="CustCity">City</label>
                                             </div>
                                         </div>
 
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
-                                                <input type="text" id="form3n1" class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3n1">City</label>
+                                                <input type="text" id="form3n1" class="form-control form-control-lg" name="CustProv" />
+                                                <label class="form-label" for="CustProv">Province</label>
                                             </div>
                                         </div>
 
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
-                                                <input type="text" id="form3n1" class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3n1">Province</label>
+                                                <input type="text" id="form3n1" class="form-control form-control-lg" name="CustPostal"/>
+                                                <label class="form-label" for="CustPostal">Postal Code</label>
+                                            </div>
+                                        </div>
+           
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="form3m1" class="form-control form-control-lg" name="CustCountry"/>
+                                                <label class="form-label" for="CustCountry">Country</label>
                                             </div>
                                         </div>
 
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
-                                                <input type="text" id="form3n1" class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3n1">Postal Code</label>
+                                                <input type="tel" id="form3n1" class="form-control form-control-lg" name="CustHomePhone" />
+                                                <label class="form-label" for="CustHomePhone">Phone</label>
                                             </div>
                                         </div>
+
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="tel" id="form3n1" class="form-control form-control-lg" name="CustEmail" />
+                                                <label class="form-label" for="CustEmail">Email</label>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <div class="form-outline mb-4">
                                         <input type="password" id="form3cg" class="form-control form-control-lg" />
@@ -128,7 +156,7 @@
                                     </div>
 
                                     <div class="d-flex justify-content-center">
-                                        <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-2 text-body">Register</button>
+                                        <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-2 text-body" >Register</button>
                                     </div>
 
                                     <div class="d-flex justify-content-center pt-3">
