@@ -28,8 +28,26 @@
           ><img src="images/logo.png" style="max-width: 90px"
         /></a>
 
-        <div>
-          <ul class="navbar-nav">
+        <div class="d-flex flex-grow-1">
+          <span class="w-100"></span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggler"
+            aria-controls="navbarToggler"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div
+          class="collapse navbar-collapse flex-grow-1 text-right"
+          id="navbarToggler"
+        >
+          <ul class="navbar-nav ms-auto flex-nowrap">
             <li class="nav-item">
               <a class="nav-link" href="packages">Packages</a>
             </li>
@@ -48,7 +66,9 @@
             </li>
             <li><a href="/user/logout" class="nav-link">Sign Out</a></li>
             <% } else { %>
-            <a href="/login" class="nav-link">Login</a>
+            <li class="nav-item">
+              <a href="/login" class="nav-link">Login</a>
+            </li>
             <% } %>
           </ul>
         </div>
