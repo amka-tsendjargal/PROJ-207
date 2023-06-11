@@ -10,47 +10,102 @@
       crossorigin="anonymous"
     />
     <title>Login Page</title>
+    <style>
+      .form-control {
+        font-size: 1.2rem;
+      }
+    </style>
   </head>
   <body style="background-size: cover" background="./images/bg-contact.jpg">
     <%- include('header') %>
     <div class="container">
       <h1 class="text-center mt-5">Welcome To Travel Expert!</h1>
+
       <div class="row justify-content-center mt-5">
-        <div class="col-12 col-sm-8 col-md-6 col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <h2 class="card-title text-center">Login</h2>
-              <form action="/login" method="POST">
+        <div class="col-12 col-lg-10">
+          <!-- Increase width on larger screens -->
+          <div class="row bg-light rounded">
+            <!-- Left half with image -->
+            <div class="col-lg-6 p-0">
+              <img
+                src="images/login_pic.jpg"
+                alt="Log in Image"
+                class="w-100 h-100 rounded-start"
+              />
+            </div>
+
+            <!-- Right half with form -->
+            <div
+              class="col-lg-6 p-5 d-flex align-items-center justify-content-center"
+              style="font-size: 1.25rem"
+            >
+              <form action="/login" method="POST" style="width: 80%">
                 <div class="mb-3">
-                  <label for="customerId" class="form-label">Customer ID</label>
+                  <label for="customerId" class="form-label fw-bold"
+                    >Customer ID</label
+                  >
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control form-control-lg"
                     id="customerId"
                     name="customerId"
                     required
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="homePhoneNumber" class="form-label"
+                  <label for="homePhoneNumber" class="form-label fw-bold"
                     >Home Phone Number</label
                   >
                   <input
                     type="password"
-                    class="form-control"
+                    class="form-control form-control-lg"
                     id="homePhoneNumber"
                     name="homePhoneNumber"
                     required
                   />
                 </div>
-                <div class="d-grid gap-2">
-                  <button type="submit" class="btn gradient-custom-2">Login</button>
+
+                <div class="form-check mb-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="rememberMe"
+                    name="rememberMe"
+                  />
+                  <label class="form-check-label" for="rememberMe">
+                    Remember me
+                  </label>
+                </div>
+
+                <div class="d-grid gap-2 mb-3">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    Login
+                  </button>
+                </div>
+
+                <!-- Here is the forgot password link -->
+                <div class="text-center mb-3">
+                  <a
+                    href="/forgot-password"
+                    class="text-decoration-none text-primary"
+                    >Forgot password?</a
+                  >
+                </div>
+
+                <!-- Here is the sign up link -->
+                <div class="text-center">
+                  Not a Member?
+                  <a href="/register" class="text-decoration-none text-primary"
+                    >Sign up</a
+                  >
                 </div>
               </form>
             </div>
           </div>
         </div>
       </div>
+      <%- include('footer') %>
     </div>
 
     <script
