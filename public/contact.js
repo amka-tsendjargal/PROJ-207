@@ -7,7 +7,7 @@ fetch("/agents")
   jsonData.forEach(function (agent) {
     var option = document.createElement("option");
     option.value = agent.AgentId;
-    option.text = agent.AgentId;
+    option.text = agent.AgtFirstName + " " + agent.AgtLastName;
     agentSelect.appendChild(option);
   });
 
