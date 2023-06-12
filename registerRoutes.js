@@ -27,11 +27,12 @@ router.post("/register1", (request, response) => {
         var sql = "INSERT INTO `customers`(`CustomerId`, `CustFirstName`, `CustLastName`, `CustAddress`, `CustCity`, `CustProv`, `CustPostal`, `CustCountry`, `CustHomePhone`, `CustEmail`) VALUES (0,?,?,?,?,?,?,?,?,?)";
 
         var data = [request.body.CustFirstName, request.body.CustLastName, request.body.CustAddress, request.body.CustCity, request.body.CustProv, request.body.CustPostal, request.body.CustCountry, request.body.CustHomePhone, request.body.CustEmail];
-
+        
 
         dbh.query({"sql": sql, "values": data}, (err, result) =>{
             if (err) throw err;
             console.log(result);
+
 
             var message = " ";
             if(result.affectedRows == 0)
@@ -39,9 +40,10 @@ router.post("/register1", (request, response) => {
                 message = "Registration failed, something is missing!"
             }
             else {
-                message = "Welcome to Travel Experts!"
+                message = "Welcome to Travel Experts! Your Customer ID is "
+                
             }
-            response.render("thanks", {"myTitle": "Confirmation", "message": message });
+            response.render("thanks", {"myTitle": "Confirmation", "message": message , "userID":result.insertId});
 
             dbh.end((err)=>{
                 if (err) throw err;

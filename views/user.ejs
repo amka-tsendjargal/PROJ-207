@@ -51,30 +51,32 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Booking History</h5>
-          <ul class="list-group" id="booking-history">
-            <% bookings.forEach((booking) => { %>
-            <li class="list-group-item">
-              <strong>Booking ID:</strong> <%= booking.BookingId %>
-              <br />
-              <strong>Booking Number:</strong> <%= booking.BookingNo %>
-              <br />
-              <strong>Booking Date:</strong> <%= booking.BookingDate %>
-              <br />
-              <strong>Traveler Count:</strong> <%= booking.TravelerCount %>
-              <br />
-
-              <button
-                class="btn btn-primary"
-                onclick="toggleDetails('<%= booking.BookingId %>')"
-              >
-                Booking Details
-              </button>
-              <div id="details-<%= booking.BookingId %>" style="display: none">
-                <!-- Detailed information will be loaded here -->
-              </div>
-            </li>
-            <% }) %>
-          </ul>
+          <% if (bookings.length === 0) { %>
+            <p>Start your first booking by clicking <a href="packages">here</a>!</p>
+          <% } else { %>
+            <ul class="list-group" id="booking-history">
+              <% bookings.forEach((booking) => { %>
+                <li class="list-group-item">
+                  <strong>Booking ID:</strong> <%= booking.BookingId %>
+                  <br />
+                  <strong>Booking Number:</strong> <%= booking.BookingNo %>
+                  <br />
+                  <strong>Booking Date:</strong> <%= booking.BookingDate %>
+                  <br />
+                  <strong>Traveler Count:</strong> <%= booking.TravelerCount %>
+                  <br />
+          
+                  <button class="btn btn-primary" onclick="toggleDetails('<%= booking.BookingId %>')">
+                    Booking Details
+                  </button>
+                  <div id="details-<%= booking.BookingId %>" style="display: none">
+                    <!-- Detailed information will be loaded here -->
+                  </div>
+                </li>
+              <% }) %>
+            </ul>
+          <% } %>
+          
         </div>
       </div>
     </div>

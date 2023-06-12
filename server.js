@@ -6,7 +6,7 @@ const loginRouter = require("./loginRoutes");
 const userRouter = require("./userRoutes");
 const registerRouter = require("./registerRoutes")
 const packagesRouter = require("./packagesRoutes")
-const bookingRouter = require("./booking_server")
+const bookingRouter = require("./bookingRoutes")
 const policyRouter = require("./policyRoutes")
 const app = express();
 

@@ -1,11 +1,14 @@
 <%- include('header') %>
   
-  <div>
-    <h2>Package Name: <%=pkg_array[0].PkgName%></h2>
-    <p><%=pkg_array[0].PkgDesc%></p>
-    <p>Duration: <%= pkg_array[0].days %> Days</p>
-    <p>Trip Date: <%= pkg_array[0].month%> <%= pkg_array[0].SDAY+' - '+pkg_array[0].EDAY%></p>
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">Package Name: <%=pkg_array[0].PkgName%></h2>
+    <p class="card-text"><%=pkg_array[0].PkgDesc%></p>
+    <p class="card-text">Duration: <%= pkg_array[0].days %> Days</p>
+    <p class="card-text">Trip Date: <%= pkg_array[0].month%> <%= pkg_array[0].SDAY+' - '+pkg_array[0].EDAY%></p>
   </div>
+</div>
+
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">

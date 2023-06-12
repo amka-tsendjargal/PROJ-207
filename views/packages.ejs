@@ -1,263 +1,4 @@
-
-      <%- include('header') %>
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 text-center"><hr style="width:98%;float:left;height:2px;background-color:green;"></div>
-    <div class="col-md-4 text-center"><h2>Book with Us &amp; Enjoy the ideal holiday</h2></div>
-    <div class="col-md-4 text-center"><hr style="width:98%;float:left;height:2px;background-color:green;"></div> 
-  </div>            
-  <div class="row">
-    <div class="col-md-3 text-center">
-      <figure class="mt-1 rounded">
-          <img src="images/package_family.jpg"
-            alt="Family" class="v_image rounded" onclick="getVactionlist('Family');">
-          <figcaption><a href="#packages" onclick="getVactionlist('Family');"><h4>Family</h4><h5>Vactions</h5></a></figcaption>
-      </figure>
-    </div>
-    <div class="col-md-3 text-center">
-      <figure class="mt-1 rounded">
-          <img src="images/package_beach.jpg"
-            alt="Beach"class="v_image rounded" onclick="getVactionlist('Beach');">
-          <figcaption><a href="#packages" onclick="getVactionlist('Beach');" ><h4>Beach</h4><h5>Vactions</h5></a></figcaption>
-      </figure>
-    </div><div class="col-md-3 text-center">
-      <figure class="mt-1 rounded">
-          <img src="images/skydiving.jpg"
-            alt="Adventure" class="v_image rounded cover" onclick="getVactionlist('Adventure');">
-          <figcaption><a href="#packages" onclick="getVactionlist('Adventure');"><h4>Adventure</h4><h5>Vactions</h5></a></figcaption>
-      </figure>
-    </div>
-    <div class="col-md-3 text-center">
-      <figure class="mt-1 rounded">
-          <img src="images/package_group.jpg"
-            alt="Group" class="v_image rounded" onclick="getVactionlist('Group');">
-          <figcaption><a href="#packages" onclick="getVactionlist('Group');"><h4>Group</h4><h5>Vactions</h5></a></figcaption>
-      </figure>
-    </div>
-  </div>
-  <div>
-    <h4 class="text-center gradient-custom-2 rounded">Our Speciality</h4>
-    <hr>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <aside>
-        <h4>About the Travel Experts</h4>
-        <p>We inspire confidence in the hearts and minds of our members to live their best lives. We’re guided by our values, which serve as a compass for every decision we make. .</p>
-      </aside>
-    </div>
-    <div class="col-md-6">
-      <aside>
-        <h4>Our Vision &amp; Values</h4>
-        <ul>
-          <li>We Value integrity,</li>
-          <li>Respect</li>
-          <li>Collboration</li>
-          <li>Excellence</li>
-        </ul>
-      </aside>
-    </div>
-  </div>
-  <hr>
-  <div class="text-center">
-    <h2>Choose your Vaccation package</h2>
-  </div>
-  <div class="container mb-5">
-    <div class="container mt-3">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card shadow-lg mb-4 bg-body-tertiary rounded">
-                    <img class="card-img-top" src="images/package1.jpg">
-                    <div class="card-body">
-                      <div id ="package-card">
-                        <h4 class="card-title"><%= pkg_array[0].PkgName %></h4>
-                        <p class="card-text">
-                            <%= pkg_array[0].PkgDesc %>
-                        </p>
-                        <p class="card-text">    
-                            $<%= pkg_array[0].PkgBasePrice %>
-                        </p>
-                      </div>
-                        
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
-                            See Details
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow-lg mb-4 bg-body-tertiary rounded">
-                    <img class="card-img-top" src="images/package1.jpg">
-                    <div class="card-body">
-                      <div id ="package-card">
-                        <h4 class="card-title"><%= pkg_array[1].PkgName %></h4>
-                        <p class="card-text">
-                            <%= pkg_array[1].PkgDesc %>
-                        </p>
-                        <p class="card-text">    
-                            $<%= pkg_array[1].PkgBasePrice %>
-                        </p>
-                      </div>
-                        
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal2">
-                            See Details
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow-lg mb-4 bg-body-tertiary rounded">
-                    <img class="card-img-top" src="images/package1.jpg">
-                    <div class="card-body">
-                      <div id ="package-card">
-                        <h4 class="card-title"><%= pkg_array[2].PkgName %></h4>
-                        <p class="card-text">
-                            <%= pkg_array[2].PkgDesc %>
-                        </p>
-                        <p class="card-text">    
-                            $<%= pkg_array[2].PkgBasePrice %>
-                        </p>
-                      </div>
-                        
-                        <button type="button" class="btn btn-primary bottom-0" data-bs-toggle="modal" data-bs-target="#myModal3">
-                            See Details
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow-lg mb-4 bg-body-tertiary rounded">
-                    <img class="card-img-top" src="images/package1.jpg">
-                    <div class="card-body">
-                      <div id ="package-card">
-                        <h4 class="card-title"><%= pkg_array[3].PkgName %></h4>
-                        <p class="card-text">
-                            <%= pkg_array[3].PkgDesc %>
-                        </p>
-                        <p class="card-text">    
-                            $<%= pkg_array[3].PkgBasePrice %>
-                        </p>
-                      </div>
-                        
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal4">
-                            See Details
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Profile Modals -->
-    <div class="modal fade" id="myModal1"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title" id="packagedtlModalLabel"><%= pkg_array[0].PkgName%></h1>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-md-4" id="modalimage">
-                  <img src="images/package1.jpg" class="v_image p-3 rounded"/>
-                </div>
-                <div class="col-md-5" id="modaltblhead">
-                  <%= pkg_array[0].PkgDesc%>
-                  <p><%= pkg_array[0].days %> Days | <%= pkg_array[0].month%> <%= pkg_array[0].SDAY+' - '+pkg_array[0].EDAY%></p>
-                </div>
-                <div class="col-md-3" >
-                <h4 style="color:red;" id="modalpkgcost">CAD <%= pkg_array[0].PkgBasePrice%></h4>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer" >
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[0].PackageId%>)" >Book your trip</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    <div class="modal fade" id="myModal2"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title" id="packagedtlModalLabel"><%= pkg_array[1].PkgName%></h1>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-md-4" id="modalimage">
-                  <img src="images/package1.jpg" class="v_image p-3 rounded"/>
-                </div>
-                <div class="col-md-5" id="modaltblhead">
-                  <%= pkg_array[1].PkgDesc%>
-                  <p><%= pkg_array[1].days %> Days | <%= pkg_array[1].month%> <%= pkg_array[1].SDAY+' - '+pkg_array[1].EDAY%></p>
-                </div>
-                <div class="col-md-3" >
-                <h4 style="color:red;" id="modalpkgcost">CAD <%= pkg_array[1].PkgBasePrice%></h4>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer" >
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[1].PackageId%>)">Book your trip</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    <div class="modal fade" id="myModal3"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title" id="packagedtlModalLabel"><%= pkg_array[2].PkgName%></h1>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-md-4" id="modalimage">
-                  <img src="images/package1.jpg" class="v_image p-3 rounded"/>
-                </div>
-                <div class="col-md-5" id="modaltblhead">
-                  <%= pkg_array[2].PkgDesc%>
-                  <p><%= pkg_array[2].days %> Days | <%= pkg_array[2].month%> <%= pkg_array[2].SDAY+' - '+pkg_array[2].EDAY%></p>
-                </div>
-                <div class="col-md-3" >
-                <h4 style="color:red;" id="modalpkgcost">CAD <%= pkg_array[2].PkgBasePrice%></h4>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer" >
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[2].PackageId%>)" >Book your trip</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    <div class="modal fade" id="myModal4"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title" id="packagedtlModalLabel"><%= pkg_array[3].PkgName%></h1>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-md-4" id="modalimage">
-                  <img src="images/package1.jpg" class="v_image p-3 rounded"/>
-                </div>
-                <div class="col-md-5" id="modaltblhead">
-                  <%= pkg_array[3].PkgDesc%>
-                  <p><%= pkg_array[3].days %> Days | <%= pkg_array[3].month%> <%= pkg_array[3].SDAY+' - '+pkg_array[3].EDAY%></p>
-                </div>
-                <div class="col-md-3" >
-                <h4 style="color:red;" id="modalpkgcost">CAD <%= pkg_array[3].PkgBasePrice%></h4>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer" >
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[3].PackageId%>)">Book your trip</button>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
-  <%- include('footer') %>
+<%- include('header') %>
 <script>
   function checkLog(id) {
     if (<%= isLoggedIn %>) {
@@ -268,7 +9,197 @@
     }
   }
 </script>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 text-center"><hr style="width:98%;float:left;height:2px;background-color:green;"></div>
+    <div class="col-md-4 text-center"><h2>Book with Us &amp; Enjoy the ideal holiday</h2></div>
+    <div class="col-md-4 text-center"><hr style="width:98%;float:left;height:2px;background-color:green;"></div> 
+  </div>
+  <div class="container mb-5">
+    <div class="container mt-3">
+      <div class="row" id="packages">
+        <% if(pkg_array.length) { for(var i = 0; i< pkg_array.length; i++){%>
+        <% var imglink=''; if(i==0) { imglink+= 'images/package1.jpg';}else if(i==1) {imglink+= 'images/package2.jpg';}else if(i==2){imglink+= 'images/package3.jpg'}else{imglink+= 'images/package4.jpg';} %> 
+        <div class="col-md-3">
+          <div class="card shadow-lg mb-4 bg-body-tertiary rounded">
+            <img class="card-img-top v_image" src=<%= imglink%>>
+            <div class="card-body">
+              <div id ="package-card">
+                <h4 class="card-title"><%= pkg_array[i].PkgName %></h4>
+                <p class="card-text">
+                    <%= pkg_array[i].PkgDesc %>
+                </p>
+                <p class="card-text">    
+                    $<%= pkg_array[i].PkgBasePrice %>
+                </p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal<%= i%>">See Details</button>
+            </div>
+          </div>
+        </div>
+        <% }}%> 
+      </div>
+    </div>
+    <!-- Profile Modals start -->
+    <div class="modal fade" id="myModal0"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="packagedtlModalLabel"><%= pkg_array[0].PkgName%></h1>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4" id="modalimage">
+                <img src="images/package1.jpg" class="v_image p-3 rounded"/>
+              </div>
+              <div class="col-md-5" id="modaltblhead">
+                <%= pkg_array[0].PkgDesc%>
+                <p><%= pkg_array[0].days %> Days | <%= pkg_array[0].month%> <%= pkg_array[0].SDAY+' - '+pkg_array[0].EDAY%></p>
+              </div>
+              <div class="col-md-3" >
+                <h4 style="color:red;" id="modalpkgcost">CAD <%= pkg_array[0].PkgBasePrice%></h4>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" >
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[0].PackageId%>)" >Book your trip</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="myModal1"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="packagedtlModalLabel"><%= pkg_array[1].PkgName%></h1>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4" id="modalimage">
+                <img src="images/package1.jpg" class="v_image p-3 rounded"/>
+              </div>
+              <div class="col-md-5" id="modaltblhead">
+                <%= pkg_array[1].PkgDesc%>
+                <p><%= pkg_array[1].days %> Days | <%= pkg_array[1].month%> <%= pkg_array[1].SDAY+' - '+pkg_array[1].EDAY%></p>
+              </div>
+              <div class="col-md-3" >
+                <h4 style="color:red;" id="modalpkgcost">CAD <%= pkg_array[1].PkgBasePrice%></h4>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" >
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[1].PackageId%>)" >Book your trip</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="myModal2"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="packagedtlModalLabel"><%= pkg_array[2].PkgName%></h1>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4" id="modalimage">
+                <img src="images/package1.jpg" class="v_image p-3 rounded"/>
+              </div>
+              <div class="col-md-5" id="modaltblhead">
+                <%= pkg_array[2].PkgDesc%>
+                <p><%= pkg_array[2].days %> Days | <%= pkg_array[2].month%> <%= pkg_array[2].SDAY+' - '+pkg_array[2].EDAY%></p>
+              </div>
+              <div class="col-md-3" >
+                <h4 style="color:red;" id="modalpkgcost">CAD <%= pkg_array[2].PkgBasePrice%></h4>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" >
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[2].PackageId%>)" >Book your trip</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="myModal3"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="packagedtlModalLabel"><%= pkg_array[3].PkgName%></h1>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4" id="modalimage">
+                <img src="images/package1.jpg" class="v_image p-3 rounded"/>
+              </div>
+              <div class="col-md-5" id="modaltblhead">
+                <%= pkg_array[3].PkgDesc%>
+                <p><%= pkg_array[3].days %> Days | <%= pkg_array[3].month%> <%= pkg_array[3].SDAY+' - '+pkg_array[3].EDAY%></p>
+              </div>
+              <div class="col-md-3" >
+                <h4 style="color:red;" id="modalpkgcost">CAD <%= pkg_array[3].PkgBasePrice%></h4>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" >
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[3].PackageId%>)" >Book your trip</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Profile Modals Ends -->
+  </div>
+  <hr>
+  <div>
+    <h4 class="text-center gradient-custom-2 rounded">Our Specialty</h4>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <aside>
+        <h4>About the Travel Experts</h4>
+        <p>We inspire confidence in the hearts and minds of our members to live their best lives. We’re guided by our values, which serve as a compass for every decision we make.</p>
+      </aside>
+    </div>
+    <div class="col-md-6">
+      <aside>
+        <h4>Our Vision &amp; Values</h4>
+        <ul>
+          <li>We value integrity</li>
+          <li>Respect</li>
+          <li>Collaboration</li>
+          <li>Excellence</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 text-center">
+      <figure class="mt-1 rounded">
+        <img src="images/package_family.jpg" alt="Family" class="v_image rounded">
+        <figcaption><a href="#packages"><h4>Family</h4><h5>Vacations</h5></a></figcaption>
+      </figure>
+    </div>
+    <div class="col-md-3 text-center">
+      <figure class="mt-1 rounded">
+        <img src="images/package_beach.jpg" alt="Beach" class="v_image rounded">
+        <figcaption><a href="#packages"><h4>Beach</h4><h5>Vacations</h5></a></figcaption>
+      </figure>
+    </div>
+    <div class="col-md-3 text-center">
+      <figure class="mt-1 rounded">
+        <img src="images/skydiving.jpg" alt="Adventure" class="v_image rounded">
+        <figcaption><a href="#packages" ><h4>Adventure</h4><h5>Vacations</h5></a></figcaption>
+      </figure>
+    </div>
+    <div class="col-md-3 text-center">
+      <figure class="mt-1 rounded">
+        <img src="images/package_group.jpg" alt="Group" class="v_image rounded">
+        <figcaption><a href="#packages"><h4>Group</h4><h5>Vacations</h5></a></figcaption>
+      </figure>
+    </div>
+  </div>
 </div>
-
-    
-    
+<%- include('footer') %>
