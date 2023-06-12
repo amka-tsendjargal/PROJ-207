@@ -1,0 +1,48 @@
+<%- include('header') %>
+  
+  <div>
+    <h2>Package Name: <%=pkg_array[0].PkgName%></h2>
+    <p><%=pkg_array[0].PkgDesc%></p>
+    <p>Duration: <%= pkg_array[0].days %> Days</p>
+    <p>Trip Date: <%= pkg_array[0].month%> <%= pkg_array[0].SDAY+' - '+pkg_array[0].EDAY%></p>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Payment Details</h5>
+          </div>
+          <div class="card-body">
+            <form action="/submit-payment" method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label">Type of Credit Card</label>
+                <select class="form-control" id="name" name="name">
+                  <option value="visa">Visa</option>
+                  <option value="mastercard">MC</option>
+                  <option value="amex">AMEX</option>
+                  <option value="discover">Diners</option>
+                </select>
+              </div>
+              
+              <div class="mb-3">
+                <label for="cardNumber" class="form-label">Card Number</label>
+                <input type="text" class="form-control" id="card-number" name="cardNumber" placeholder="Enter card number">
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="expiryDate" class="form-label">Expiry Date</label>
+                    <input type="date" class="form-control" id="expiry-date" name="expiryDate">
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit Payment</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

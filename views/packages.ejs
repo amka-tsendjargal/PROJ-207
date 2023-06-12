@@ -170,7 +170,7 @@
             </div>
             <div class="modal-footer" >
               <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" >Book your trip</button>
+              <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[0].PackageId%>)" >Book your trip</button>
             </div>
           </div>
         </div>
@@ -197,7 +197,7 @@
             </div>
             <div class="modal-footer" >
               <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" >Book your trip</button>
+              <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[1].PackageId%>)">Book your trip</button>
             </div>
           </div>
         </div>
@@ -224,7 +224,7 @@
             </div>
             <div class="modal-footer" >
               <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" >Book your trip</button>
+              <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[2].PackageId%>)" >Book your trip</button>
             </div>
           </div>
         </div>
@@ -251,17 +251,24 @@
             </div>
             <div class="modal-footer" >
               <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" >Book your trip</button>
+              <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[3].PackageId%>)">Book your trip</button>
             </div>
           </div>
         </div>
       </div>
   </div>
+  <%- include('footer') %>
+<script>
+  function checkLog(id) {
+    if (<%= isLoggedIn %>) {
+      window.location = 'booking?id=' + id
+    }
+    else {
+      window.location = '/login'
+    }
+  }
+</script>
 </div>
-<%- include('footer') %>
-    
-    
-  
-  
 
-<https://teams.microsoft.com/l/message/19:630007dbf5a7477eaa067aabc7d2baf1@thread.tacv2/1686340985336?tenantId=f52f2183-9f67-4ad2-b656-6f754fe196cb&amp;groupId=a55136f6-aa38-458d-80ef-f4195d9ad290&amp;parentMessageId=1686340985336&amp;teamName=OOSD-2023-05&amp;channelName=Group 6&amp;createdTime=1686340985336&amp;allowXTenantAccess=false>
+    
+    

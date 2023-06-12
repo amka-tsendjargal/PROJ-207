@@ -70,7 +70,7 @@ router.get("/booking-details/:id", function (req, res) {
     html += "<tbody>";
     for (let detail of bookingDetails) {
       html += "<tr>";
-      html += `<td>${detail.DetailId}</td>`;
+      html += `<td>${detail.BookingDetailId}</td>`;
       html += `<td>${detail.ItineraryNo}</td>`;
       html += `<td>${detail.TripStart}</td>`;
       html += `<td>${detail.TripEnd}</td>`;

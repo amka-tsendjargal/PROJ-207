@@ -6,6 +6,7 @@ const loginRouter = require("./loginRoutes");
 const userRouter = require("./userRoutes");
 const registerRouter = require("./registerRoutes")
 const packagesRouter = require("./packagesRoutes")
+const bookingRouter = require("./booking_server")
 const app = express();
 
 // Start the server
@@ -40,6 +41,7 @@ app.use("/", loginRouter);
 app.use("/", userRouter);
 app.use("/", registerRouter)
 app.use("/", packagesRouter)
+app.use("/", bookingRouter)
 
 // These will be change to utilize Router when done.
 app.get("/packages", (request, response) => {
