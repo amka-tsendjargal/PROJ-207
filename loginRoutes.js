@@ -13,6 +13,10 @@ router.get("/login", (req, res) => {
   res.render("login", { pageTitle: "Log In" });
 });
 
+router.get("/forgot-password", (req, res) => {
+  res.render("404", { pageTitle: "404 Not Found" });
+});
+
 router.post("/login", (req, res) => {
   const customerId = req.body.customerId;
   const homePhoneNumber = req.body.homePhoneNumber;

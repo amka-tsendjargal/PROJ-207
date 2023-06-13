@@ -36,10 +36,11 @@ router.post('/submit-payment', (req, res) => {
     password: "password",
     database: "travelexperts",
   });
+
   const { name, cardNumber, expiryDate } = req.body;
   const customerId = req.session.customerId;
   console.log(pkg_id)
-  //const pkg_id = req.query.id;
+
  let lastBookingId; 
   const bookingQuery = "INSERT INTO `bookings`(`BookingId`, `BookingDate`, `BookingNo`, `CustomerId`) VALUES (?, ?, ?, ?)"
   connection.query({'sql': bookingQuery, 'values': [0, new Date(), generateRandomString(), customerId]}, (err, result) => {
@@ -62,19 +63,19 @@ router.post('/submit-payment', (req, res) => {
             })
   });
 
+  
   const query = 'INSERT INTO creditcards (CCName, CCNumber, CCExpiry, CustomerId) VALUES (?, ?, ?, ?)';
   
   connection.query(query, [name, cardNumber, expiryDate, customerId], (err, results) => {
     if (err) {
       console.error('Error executing MySQL query:', err);
-      return res.status(500).json({ error: 'Database query error' });
+      res.render("confirmation", { success: false });
     }
     connection.end((err)=>{
       if(err) throw err;
           console.log("Disconnected from database");
   });
-
-    return res.status(200).json({ message: 'Payment submitted successfully' });
+    res.render("confirmation", { success: true });
   });
 });
 
