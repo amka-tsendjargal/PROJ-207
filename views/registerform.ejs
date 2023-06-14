@@ -142,7 +142,7 @@
                                     <div class="form-check d-flex justify-content-center mb-5">
                                         <input class="form-check-input me-2" type="checkbox" value="" id="form2cg" onchange="agreementCheck()"/>
                                         <label class="form-check-label" for="form2g">
-                                            I agree with the <a href="policy" class="text-body"><u>Terms and Conditions!</u></a>
+                                            I agree with the <a href="policy" class="text-body" target="_blank"><u>Terms and Conditions!</u></a>
                                         </label>
                                     </div>
 
@@ -151,10 +151,10 @@
                                     </div>
 
                                     <div class="d-flex justify-content-center pt-3">
-                                        <input class="btn btn-light btn-lg" type="reset" value="Reset">
+                                        <input class="btn btn-light btn-lg" type="reset" onclick="return confirm('Are you sure you want to reset the form?')" value="Reset">
                                     </div>
 
-                                    <p class="text-center text-muted mt-5 mb-0">Already an expert traveler? <a href="#!" class="fw-bold text-body"><u>Login here</u></a></p>
+                                    <p class="text-center text-muted mt-5 mb-0">Already an expert traveler? <a href="login" class="fw-bold text-body"><u>Login here</u></a></p>
                                 </form>
                             </div>
                         </div>
@@ -165,6 +165,4 @@
     </section>
 </body>
 <%- include('footer') %>
-</html>
-=======
 </html>
