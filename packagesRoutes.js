@@ -1,9 +1,10 @@
+// Importing necessary modules
 const express = require("express");
 const router = express.Router();
 const mysql = require("mysql");
 
 
-
+// This get method gives the Packages page all data from the 'packages' table
 router.get('/packages', (request, response) => {
     var dbh = mysql.createConnection({
     host: "localhost",
