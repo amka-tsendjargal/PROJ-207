@@ -1,3 +1,7 @@
+// This is our main server to connect all the routers.
+// Author: Shuo, Amka, Deepa, Gabriel
+// When: June 2023
+
 const express = require("express");
 const session = require("express-session");
 const indexRouter = require("./indexRoutes");
@@ -15,6 +19,7 @@ app.listen(8000, () => {
   console.log("Server listening on port 8000");
 });
 
+// Middleware for ejs and static directory.
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
@@ -36,6 +41,7 @@ app.use((req, res, next) => {
   next();
 });
 
+// Adding all the router to root directory
 app.use("/", indexRouter);
 app.use("/", contactRouter);
 app.use("/", loginRouter);
@@ -44,8 +50,3 @@ app.use("/", registerRouter)
 app.use("/", packagesRouter)
 app.use("/", bookingRouter)
 app.use("/", policyRouter)
-
-// These will be change to utilize Router when done.
-app.get("/packages", (request, response) => {
-  response.render("packages", { pageTitle: "Packages" });
-});
