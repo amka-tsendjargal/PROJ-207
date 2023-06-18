@@ -1,5 +1,7 @@
+<!-- Designed as a customer interface to view all the packages from db. Author: Deepa -->
 <%- include('header') %>
 <script>
+<!--Function to check user is logged in or not, isLoggedIn is a session variable stands for login status -->
   function checkLog(id) {
     if (<%= isLoggedIn %>) {
       window.location = 'booking?id=' + id
@@ -19,6 +21,7 @@
     <div class="container mb-5">
       <div class="container mt-3">
         <div class="row" id="packages">
+        <!-- to list packages detail from db -->
           <% if(pkg_array.length) { for(var i = 0; i< pkg_array.length; i++){%>
           <% var imglink=''; if(i==0) { imglink+= 'images/package1.jpg';}else if(i==1) {imglink+= 'images/package2.jpg';}else if(i==2){imglink+= 'images/package3.jpg'}else{imglink+= 'images/package4.jpg';} %> 
           <div class="col-md-3">
@@ -69,6 +72,7 @@
           </div>
         </div>
       </div>
+
       <div class="modal fade" id="myModal1"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
@@ -176,6 +180,7 @@
         </aside>
       </div>
     </div>
+<!-- Filter section starts here -->
     <div class="row">
       <div class="col-md-3 text-center">
         <figure class="mt-1 rounded">
