@@ -2,7 +2,7 @@
 // The page displays user's selected package information
 // Takes in user's payment information and adds it to database
 // After payment, it adds the bought package to user's records
-// Author: Amka, Shuo
+// Author: Amka, Shuo , Deepa
 // When: June 2023
 
 // Necessary module imports
