@@ -1,0 +1,10 @@
+This document lists Who wrote which page for all our ejs file.
+
+  Amka:
+      Header.ejs, Footer.ejs, Booking.ejs, index.ejs
+  Gabriel:
+      404.ejs, policy.ejs, registerform.ejs, thanks.ejs
+  Deepa:
+      Packages.ejs, Booking.ejs
+  Shuo:
+      confirmation.ejs, contact.ejs, login.ejs, logout.ejs, result.ejs, user.ejs
