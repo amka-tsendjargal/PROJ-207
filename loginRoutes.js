@@ -1,7 +1,12 @@
+// This router file handles the log in page.
+// Author: Shuo
+// When: June 2023
+
 const express = require("express");
 const router = express.Router();
-const mysql = require("mysql");
+const mysql = require("MySQL");
 
+// Database Connection
 const connection = mysql.createConnection({
   host: "localhost",
   user: "xiangshuo",
@@ -13,10 +18,12 @@ router.get("/login", (req, res) => {
   res.render("login", { pageTitle: "Log In" });
 });
 
+// Forgot password page not working so we direct to 404 page.
 router.get("/forgot-password", (req, res) => {
   res.render("404", { pageTitle: "404 Not Found" });
 });
 
+// Check if the user's input exist in our database, use will be redirected to user's profile page if successfully logged in, or it will send alert shows log in failed.
 router.post("/login", (req, res) => {
   const customerId = req.body.customerId;
   const homePhoneNumber = req.body.homePhoneNumber;
