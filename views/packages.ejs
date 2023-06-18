@@ -1,7 +1,7 @@
-<!-- Designed as a customer interface to view all the packages from db. Author: Deepa -->
+<!-- Designed as a customer interface to view all the packages from db. Author: Deepa & design support :Amga -->
 <%- include('header') %>
 <script>
-<!--Function to check user is logged in or not, isLoggedIn is a session variable stands for login status -->
+  //Function to check user is logged in or not, isLoggedIn is a session variable stands for login status and declared in the server.js file
   function checkLog(id) {
     if (<%= isLoggedIn %>) {
       window.location = 'booking?id=' + id
@@ -15,13 +15,13 @@
   <div class="container" >
     <div class="row">
       <div class="col-md-4 text-center"><hr style="width:98%;float:left;height:2px;background-color:green;"></div>
-      <div class="col-md-4 text-center"><h2>Book with Us &amp; Enjoy the ideal holiday</h2></div>
+      <div class="col-md-4 text-center"><h2>Book with Us & Enjoy the ideal holiday</h2></div>
       <div class="col-md-4 text-center"><hr style="width:98%;float:left;height:2px;background-color:green;"></div> 
     </div>
     <div class="container mb-5">
       <div class="container mt-3">
         <div class="row" id="packages">
-        <!-- to list packages detail from db -->
+          <!-- to list packages detail from db -->
           <% if(pkg_array.length) { for(var i = 0; i< pkg_array.length; i++){%>
           <% var imglink=''; if(i==0) { imglink+= 'images/package1.jpg';}else if(i==1) {imglink+= 'images/package2.jpg';}else if(i==2){imglink+= 'images/package3.jpg'}else{imglink+= 'images/package4.jpg';} %> 
           <div class="col-md-3">
@@ -41,120 +41,38 @@
               </div>
             </div>
           </div>
+          <!-- Package Modal starts here -->
+          <div class="modal fade" id="myModal<%= i%>"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title" id="packagedtlModalLabel"><%= pkg_array[i].PkgName%></h1>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-4" id="modalimage">
+                      <img src="<%= imglink%>" class="v_image p-3 rounded"/>
+                    </div>
+                    <div class="col-md-5" id="modaltblhead">
+                      <%= pkg_array[i].PkgDesc%>
+                      <p><%= pkg_array[i].days %> Days | <%= pkg_array[i].month%> <%= pkg_array[i].SDAY+' - '+pkg_array[i].EDAY%></p>
+                    </div>
+                    <div class="col-md-3" >
+                      <h4 style="color:red;" id="modalpkgcost">CAD <%= pkg_array[i].PkgBasePrice%></h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer" >
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[i].PackageId%>)" >Book your trip</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Package modal ends here-->
           <% }}%> 
         </div>
       </div>
-      <!-- Profile Modals start -->
-      <div class="modal fade" id="myModal0"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title" id="packagedtlModalLabel"><%= pkg_array[0].PkgName%></h1>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-md-4" id="modalimage">
-                  <img src="images/package1.jpg" class="v_image p-3 rounded"/>
-                </div>
-                <div class="col-md-5" id="modaltblhead">
-                  <%= pkg_array[0].PkgDesc%>
-                  <p><%= pkg_array[0].days %> Days | <%= pkg_array[0].month%> <%= pkg_array[0].SDAY+' - '+pkg_array[0].EDAY%></p>
-                </div>
-                <div class="col-md-3" >
-                  <h4 style="color:red;" id="modalpkgcost">CAD <%= pkg_array[0].PkgBasePrice%></h4>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer" >
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[0].PackageId%>)" >Book your trip</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal fade" id="myModal1"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title" id="packagedtlModalLabel"><%= pkg_array[1].PkgName%></h1>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-md-4" id="modalimage">
-                  <img src="images/package2.jpg" class="v_image p-3 rounded"/>
-                </div>
-                <div class="col-md-5" id="modaltblhead">
-                  <%= pkg_array[1].PkgDesc%>
-                  <p><%= pkg_array[1].days %> Days | <%= pkg_array[1].month%> <%= pkg_array[1].SDAY+' - '+pkg_array[1].EDAY%></p>
-                </div>
-                <div class="col-md-3" >
-                  <h4 style="color:red;" id="modalpkgcost">CAD <%= pkg_array[1].PkgBasePrice%></h4>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer" >
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[1].PackageId%>)" >Book your trip</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="myModal2"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title" id="packagedtlModalLabel"><%= pkg_array[2].PkgName%></h1>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-md-4" id="modalimage">
-                  <img src="images/package3.jpg" class="v_image p-3 rounded"/>
-                </div>
-                <div class="col-md-5" id="modaltblhead">
-                  <%= pkg_array[2].PkgDesc%>
-                  <p><%= pkg_array[2].days %> Days | <%= pkg_array[2].month%> <%= pkg_array[2].SDAY+' - '+pkg_array[2].EDAY%></p>
-                </div>
-                <div class="col-md-3" >
-                  <h4 style="color:red;" id="modalpkgcost">CAD <%= pkg_array[2].PkgBasePrice%></h4>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer" >
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[2].PackageId%>)" >Book your trip</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="myModal3"  tabindex="-1" aria-labelledby="packagedtlModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title" id="packagedtlModalLabel"><%= pkg_array[3].PkgName%></h1>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-md-4" id="modalimage">
-                  <img src="images/package4.jpg" class="v_image p-3 rounded"/>
-                </div>
-                <div class="col-md-5" id="modaltblhead">
-                  <%= pkg_array[3].PkgDesc%>
-                  <p><%= pkg_array[3].days %> Days | <%= pkg_array[3].month%> <%= pkg_array[3].SDAY+' - '+pkg_array[3].EDAY%></p>
-                </div>
-                <div class="col-md-3" >
-                  <h4 style="color:red;" id="modalpkgcost">CAD <%= pkg_array[3].PkgBasePrice%></h4>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer" >
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success" onclick="checkLog(<%=pkg_array[3].PackageId%>)" >Book your trip</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Profile Modals Ends -->
     </div>
     <hr>
     <div>
@@ -170,7 +88,7 @@
       </div>
       <div class="col-md-6">
         <aside>
-          <h4>Our Vision &amp; Values</h4>
+          <h4>Our Vision & Values</h4>
           <ul>
             <li>We value integrity</li>
             <li>Respect</li>
@@ -180,7 +98,7 @@
         </aside>
       </div>
     </div>
-<!-- Filter section starts here -->
+    <!-- Filter section starts here -->
     <div class="row">
       <div class="col-md-3 text-center">
         <figure class="mt-1 rounded">
