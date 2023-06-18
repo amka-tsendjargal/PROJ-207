@@ -1,3 +1,8 @@
+// This router file handles the contact us page.
+// The page serves the functionality of displaying the agent list and sending emails via the contact form
+// Author: Shuo
+// When: June 2023
+
 const express = require("express");
 const router = express.Router();
 const mysql = require("mysql");
@@ -43,7 +48,7 @@ router.get("/agents", (req, res) => {
   });
 });
 
-
+// Use nodemailer package to format and send email
 router.post("/send-email", (req, res) => {
   const { name, email, dropdown, message } = req.body;
   console.log({ name, email, dropdown, message });
