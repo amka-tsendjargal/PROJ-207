@@ -10,6 +10,7 @@ const mysql = require("mysql");
 
 // This get method gives the Packages page all data from the 'packages' table
 router.get('/packages', (request, response) => {
+    //for db connection
     var dbh = mysql.createConnection({
     host: "localhost",
     user: "xiangshuo",
