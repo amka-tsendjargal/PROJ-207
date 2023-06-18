@@ -1,3 +1,7 @@
+// This router file handles the register form page.
+// The page gathers information inputed by the user and send it to the database
+//After creating a profile the user immediately gets an id for future login into the system 
+//Author: Gabriel
 const mysql = require("mysql");
 const express = require("express");
 const app = express();
