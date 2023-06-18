@@ -1,3 +1,7 @@
+// This router file handles the packages page.
+// The page serves the functionality of displaying all the packages to the Customer.
+// Author: Deepa
+// When: June 2023
 // Importing necessary modules
 const express = require("express");
 const router = express.Router();
