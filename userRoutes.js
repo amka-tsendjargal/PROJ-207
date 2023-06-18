@@ -1,3 +1,10 @@
+// This is our main server to connect all the routers.
+// After successfully log in, this page will be available to user. It will show the users profile and their booking history.
+// The booking history is seperate by 2 part and they are fetched from 2 different databases - bookings and bookingDetails.
+// User will see the information from booking table, once they click the "Booking Detail" button, the information from second database will also display.
+// Author: Shuo
+// When: June 2023
+
 const express = require("express");
 const router = express.Router();
 const mysql = require("mysql");
