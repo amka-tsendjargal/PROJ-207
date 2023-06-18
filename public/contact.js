@@ -1,3 +1,8 @@
+// This script is for the functionality of the contact us page.
+// It fetches the agent list from the endpoint and is displayed as a drop-down list.
+// Author: Shuo
+// When: June 2023
+
 // Fetch the JSON data from the "/agents" endpoint
 fetch("/agents")
 .then((response) => response.json())
