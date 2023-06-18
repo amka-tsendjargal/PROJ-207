@@ -1,9 +1,0 @@
-Index
-    Packages
-        Booking
-    Join Us(Registration)
-        Policy
-        Thanks
-    LogIn
-        User
-    Contact Us
